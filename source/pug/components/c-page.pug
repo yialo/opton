@@ -1,0 +1,6 @@
+mixin page(pageName)
+  body.page(class='page--' + pageName)
+    .page__header
+      +page-header(pageName)
+    .page__main
+    .page__footer

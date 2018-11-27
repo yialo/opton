@@ -17,7 +17,7 @@ Thumbs.db
 *.ali
 
 # Specification folder
-spec/
+specification/
 
 # Node.js modules
 node_modules/

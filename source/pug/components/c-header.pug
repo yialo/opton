@@ -1,0 +1,12 @@
+mixin page-header(pageName)
+  header.page-header(class='page-header--' + pageName)
+    .page-header__inner
+      .page-header__logo
+      .page-header__row
+        .page-header__main-navigation
+          //- +main-navigation(pageName)
+        .page-header__contacts
+          .page-header__email
+            span.page-header__email-text info@mail.ru
+          .page-header__phone
+            span.page-header__phone +7 (495) 664-55-20
