@@ -3,6 +3,7 @@ mixin page(pageName, pageTitle)
     .page__header
       +page-header(pageName, pageTitle)
     .page__main
-      +page-main(pageName)
+      if pageName = 'index'
+        include page-main--index.pug
     .page__footer
       +page-footer(pageName)
