@@ -3,4 +3,15 @@ mixin page-footer(pageName)
     .page-footer__inner
       .page-footer__main-navigation
         +main-navigation(pageName, 'footer')
-
+      .page-footer__social
+        +social()
+      ul.page-footer__contact-list
+        li.page-footer__contact
+          span.page-footer__contact-content.page-footer__contact-content--string
+            | г. Москва, ул. Коштоянца д. 12, оф. 1
+        li.page-footer__contact
+          a.page-footer__contact-content.page-footer__contact-content--link(href='tel:+74956645520')
+            | +7 (495) 664-55-20
+        li.page-footer__contact
+          a.page-footer__contact-content.page-footer__contact-content--link(href='mailto:info@mail.ru')
+            | info@mail.ru
