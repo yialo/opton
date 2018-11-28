@@ -1,8 +1,8 @@
-mixin page-header(pageName)
+mixin page-header(pageName, pageTitle)
   header.page-header(class='page-header--' + pageName)
     .page-header__inner
       .page-header__logo
-        +logo('Сайт компании Opton Engineering')
+        +logo(pageName, pageTitle)
       .page-header__main-navigation
         +main-navigation(pageName, 'header')
       ul.page-header__contact-list

@@ -1,0 +1,15 @@
+mixin promo()
+  section.promo
+    .promo__inner
+      h2.promo__heading
+      .promo__slider
+        ul.promo__list
+      ul.promo__controls
+        - var i = 1;
+        mixin promo__control-item(i)
+          li.promo__control-item
+            button.promo__button(type='button')
+        while i <= 4
+          +promo__controls-item
+
+

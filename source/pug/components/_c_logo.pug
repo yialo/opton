@@ -1,4 +1,8 @@
-mixin logo(pageHeading)
-  div.logo
-    img.logo__image(src='img/logo.png' alt='Opton Engineering')
+mixin logo(pageName, pageHeading)
+  - var logoLinkPath = {href: 'index.html'};
+  if (pageName === 'index')
+    - var logoLinkPath = '';
+  .logo
+    a.logo__link&attributes(logoLinkPath)
+      img.logo__image(src='img/logo.png' alt='Opton Engineering')
     h1.visually-hidden= pageHeading

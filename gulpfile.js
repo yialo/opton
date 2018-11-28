@@ -145,7 +145,7 @@ var style = function () {
 }
 
 var html = function () {
-    return gulp.src('./source/pug/pages/*.pug')
+    return gulp.src('./source/pug/*.pug')
       .pipe(plumber())
       .pipe(pug())
       .pipe(gulp.dest('./build/'))

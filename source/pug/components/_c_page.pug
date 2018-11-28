@@ -1,7 +1,8 @@
-mixin page(pageName)
+mixin page(pageName, pageTitle)
   body.page(class='page--' + pageName)
     .page__header
-      +page-header(pageName)
+      +page-header(pageName, pageTitle)
     .page__main
+      +page-main(pageName)
     .page__footer
       +page-footer(pageName)
