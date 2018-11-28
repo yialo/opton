@@ -24,7 +24,7 @@ var
 // Task functions
 
 var minsvg = function () {
-  return gulp.src('./source/imgraw/*.svg')
+  return gulp.src('./source/img-raw/*.svg')
     .pipe(minimage([
       minimage.svgo({
         plugins: [
@@ -77,7 +77,7 @@ var minsvg = function () {
 }
 
 var minbitmap = function () {
-  return gulp.src('./source/imgraw/*.{jpg,png}')
+  return gulp.src('./source/img-raw/*.{jpg,png}')
     .pipe(minimage([
       pngquant({
         speed: 1,
