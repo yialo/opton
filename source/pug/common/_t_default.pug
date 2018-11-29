@@ -1,7 +1,7 @@
-include ../abstracts/_mixins.pug
-include ../data/_d_title.pug
-
 block variables
+
+include _i_data.pug
+include _i_components.pug
 
 doctype html
 html(lang="ru")
@@ -23,9 +23,9 @@ html(lang="ru")
     .page__header
       +page-header(pageName, pageTitle)
     .page__main
-      if pageName = 'index'
-        include ../components/page-main--index.pug
+      main.page-main(class='page-main--' + pageName)
+        block page-main
     .page__footer
       +page-footer(pageName)
-  block customScripts
-  script(src='js/picturefill.js')
+    block custom-scripts
+    script(src='js/picturefill.js')
