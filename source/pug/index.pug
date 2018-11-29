@@ -1,15 +1,13 @@
 extends common/_t_default.pug
 
 block variables
-  - var pageName = 'index';
+  -
+    var page = {
+      id: 'index',
+      title: 'Главная',
+      heading: `Сайт компании ${siteName}`
+    };
 
 block page-main
   .page-main__promo
     +promo()
-  //- .page-main__catalog
-  //-   +catalog()
-  //- .page-main__lead
-  //-   +lead()
-  //- .page-main__partners
-  //-   +partners('short')
-

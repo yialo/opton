@@ -1,10 +1,10 @@
-mixin page-header(pageName, pageTitle)
-  header.page-header(class='page-header--' + pageName)
+mixin page-header(pageHeader_pageId, pageHeader_pageTitle)
+  header.page-header(class='page-header--' + page.id)
     .page-header__inner
       .page-header__logo
-        +logo(pageName, pageTitle)
+        +logo(pageHeader_pageId, pageHeader_pageTitle)
       .page-header__navigation
-        +navigation(pageName, 'header')
+        +navigation(pageHeader_pageId, 'header')
       ul.page-header__contact-list
         li.page-header__contact
           a.page-header__contact-content.page-header__contact-content--email(href='mailto:info@mail.ru')
@@ -13,10 +13,10 @@ mixin page-header(pageName, pageTitle)
           a.page-header__contact-content.page-header__contact-content--tel(href='tel:+74956645520')
             | +7 (495) 664-55-20
     each name in hasBanner
-      if (pageName === name)
+      if (name === pageHeader_pageId)
         .page-header__banner
           +banner()
     each name in hasBreadcrumbs
-      if (pageName === name)
+      if (name === pageHeader_pageId)
         .page-header__breadcrumbs
           +breadcrumbs()

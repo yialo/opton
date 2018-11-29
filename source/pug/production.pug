@@ -1,6 +1,9 @@
 extends common/_t_default.pug
 
 block variables
-  - var pageName = 'production';
-
-block page-main
+  -
+    var page = {
+      id: 'production',
+      title: 'Продукция',
+      heading: 'Продукция'
+    };

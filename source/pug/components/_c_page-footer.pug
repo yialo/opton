@@ -1,8 +1,8 @@
-mixin page-footer(pageName)
+mixin page-footer(pageFooter_pageId)
   footer.page-footer
     .page-footer__inner
       .page-footer__navigation
-        +navigation(pageName, 'footer')
+        +navigation(pageFooter_pageId, 'footer')
       .page-footer__social
         +social()
       ul.page-footer__contact-list
