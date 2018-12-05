@@ -1,6 +1,6 @@
-mixin logo(logo_PageId, logo_PageHeading)
+mixin logo(logo_pageId, logo_PageHeading)
   - var logoLinkPath = {href: 'index.html'};
-  if (logo_PageId === 'index')
+  if (logo_pageId === 'index')
     - var logoLinkPath = '';
   .logo
     a.logo__link&attributes(logoLinkPath)

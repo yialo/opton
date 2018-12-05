@@ -9,5 +9,6 @@ block variables
     };
 
 block page-main
-  .page-main__promo
-    +promo()
+  main.page-main(class='page-main--' + page.id)
+    .page-main__promo
+      +promo()

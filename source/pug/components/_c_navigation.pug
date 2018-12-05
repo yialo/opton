@@ -1,10 +1,10 @@
-mixin navigation(navigation_PageId, componentPosition)
+mixin navigation(navigation_pageId, componentPosition)
   nav.navigation(class='navigation--' + componentPosition)
     ul.navigation__list
       mixin navigation__item(itemPath, itemText)
         li.navigation__item
           - var itemLink = {href: itemPath + '.html'};
-          if (itemPath === navigation_PageId)
+          if (itemPath === navigation_pageId)
             - var itemLink = '';
           a.navigation__link&attributes(itemLink)= itemText
       each value, key in navigationData
