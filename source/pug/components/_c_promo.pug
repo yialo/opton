@@ -9,6 +9,5 @@ mixin promo()
               p.promo__subtitle= itemSubtitle
           - var i = 1;
           while i <= 3
-            +promo__item()
-
-
+            +promo__item(promoItemTitles[i - 1], promoItemSubtitles[i - 1])
+            - i++;
