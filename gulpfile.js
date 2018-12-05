@@ -9,7 +9,7 @@ var
   gulp = require('gulp'),
   mincss = require('gulp-csso'),
   minimage = require('gulp-imagemin'),
-  minjs = require('gulp-uglify'),
+  minjs = require('gulp-terser'),
   mozjpeg = require('imagemin-mozjpeg'),
   notify = require('gulp-notify'),
   plumber = require('gulp-plumber'),
