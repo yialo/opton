@@ -3,7 +3,7 @@ mixin brands()
     .brands__inner
       ul.brands__list
         mixin brands__item(brandsItem_number)
-          li.brands__item(class=`brands__item--${brandsItem_number}`)
+          li.brands__item(class=`brands__item--${brandsItem_number + 1}`)
             +brand-card(brandsItem_number)
         - let i = 0;
         while i < brandCardLists.length

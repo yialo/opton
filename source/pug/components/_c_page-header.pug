@@ -27,4 +27,4 @@ mixin page-header(pageHeader_options)
     each name in hasBreadcrumbs
       if (name === pageHeader_options.pageId)
         .page-header__breadcrumbs
-          +breadcrumbs()
+          +breadcrumbs(pageHeader_options.pageId)

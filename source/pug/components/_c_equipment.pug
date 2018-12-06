@@ -8,10 +8,10 @@ mixin equipment()
             +product-card({
               componentModifier: 'equipment',
               itemNumber: equipment_itemNumber,
-              imageLegend: 'Оборудование',
+              imageLegend: 'Оборудование, изображение',
               captionStack: equipmentProductCardCaptions
             })
         - let i = 1;
-        while i <= 6
+        while i <= equipmentProductCardCaptions.length
           +equipment__item(i)
           - i++;

@@ -1,0 +1,16 @@
+mixin production()
+  .production
+    .production__inner
+      ul.production__list
+        mixin production__item(production_itemNumber)
+          li.production__item
+            +product-card({
+              componentModifier: 'production',
+              itemNumber: production_itemNumber,
+              imageLegend: 'Продукция, изображение',
+              captionStack: productionProductCardCaptions
+            })
+        - let i = 1;
+        while i <= productionProductCardCaptions.length
+          +production__item(i)
+          - i++;
