@@ -2,10 +2,10 @@ mixin brands()
   .brands
     .brands__inner
       ul.brands__list
-        mixin brands__item(brands_itemNumber)
-          li.brands__card
-            +brand-card(brands_itemNumber)
-        - let i = 1;
-        while i <= 9
+        mixin brands__item(brandsItem_number)
+          li.brands__item(class=`brands__item--${brandsItem_number}`)
+            +brand-card(brandsItem_number)
+        - let i = 0;
+        while i < brandCardLists.length
           +brands__item(i)
           - i++;
