@@ -1,0 +1,13 @@
+extends common/_t_default.pug
+
+block variables
+  -
+    const page = {
+      id: 'training',
+      title: 'Обучение',
+      heading: 'Обучение'
+    };
+
+block page-main
+  .page-main__training
+    +training()
