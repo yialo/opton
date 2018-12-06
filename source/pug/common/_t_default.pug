@@ -25,7 +25,8 @@ html(lang="ru")
     .page__header
       +page-header(page.id, page.heading)
     .page__main
-      block page-main
+      main.page-main(class='page-main--' + page.id)
+        block page-main
     .page__footer
       +page-footer(page.id)
     block custom-scripts
