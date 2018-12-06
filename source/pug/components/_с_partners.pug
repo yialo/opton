@@ -1,7 +1,7 @@
 mixin partners()
   section.partners
     .partners__inner
-      .partners__heading
+      h2.partners__heading Партнёры
       .partners__slider
         ul.partners__list
           mixin partners__item(itemNumber)
@@ -10,7 +10,7 @@ mixin partners()
                 src=`img/partners__image--${itemNumber}`
                 alt=`Логотип партнёра №${itemNumber}`
               )
-          - var i = 1;
+          - let i = 1;
           while i <= 9
             +partners__item(i)
             - i++;

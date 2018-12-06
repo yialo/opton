@@ -5,14 +5,13 @@ mixin equipment()
       ul.equipment__list
         mixin equipment__item(itemNumber)
           li.equipment__item
-            .equipment__card
-              +product-card(
-                'equipment',
-                itemNumber,
-                'Оборудование',
-                equipmentProductCardCaptions
-              )
-        - var i = 1;
+            +product-card(
+              'equipment',
+              itemNumber,
+              'Оборудование',
+              equipmentProductCardCaptions
+            )
+        - let i = 1;
         while i <= 6
           +equipment__item(i)
           - i++;

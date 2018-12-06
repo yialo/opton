@@ -1,8 +1,9 @@
-mixin logo(logo_pageId, logo_PageHeading)
-  - var logoLinkPath = {href: 'index.html'};
+mixin logo(logo_pageId, logo_pageHeading)
+  - let logoLinkPath = {href: 'index.html'};
   if (logo_pageId === 'index')
-    - var logoLinkPath = '';
+    - logoLinkPath = '';
   .logo
     a.logo__link&attributes(logoLinkPath)
       img.logo__image(src='img/logo.png' alt='Opton Engineering')
-    h1.visually-hidden= logo_PageHeading
+    if (logo_pageId === 'index')
+      h1.visually-hidden= logo_pageHeading

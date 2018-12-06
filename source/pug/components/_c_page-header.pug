@@ -1,8 +1,8 @@
-mixin page-header(pageHeader_pageId, pageHeader_pageTitle)
+mixin page-header(pageHeader_pageId, pageHeader_pageHeading)
   header.page-header(class='page-header--' + page.id)
     .page-header__inner
       .page-header__logo
-        +logo(pageHeader_pageId, pageHeader_pageTitle)
+        +logo(pageHeader_pageId, pageHeader_pageHeading)
       .page-header__navigation
         +navigation(pageHeader_pageId, 'header')
       ul.page-header__contact-list
@@ -15,7 +15,7 @@ mixin page-header(pageHeader_pageId, pageHeader_pageTitle)
     each name in hasBanner
       if (name === pageHeader_pageId)
         .page-header__banner
-          +banner()
+          +banner(pageHeader_pageHeading)
     each name in hasBreadcrumbs
       if (name === pageHeader_pageId)
         .page-header__breadcrumbs

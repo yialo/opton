@@ -1,0 +1,9 @@
+mixin service-card(componentModifier, itemNumber, imageLegend, captionStack)
+  .service-card(class=`service-card--${componentModifier}`)
+    a.service-card__link(href='#')
+      img.service-card__image(
+        src=`service-card__image--${itemNumber}`
+        alt=`${imageLegend} №${itemNumber}`
+      )
+      .service-card__text
+        h3.service-card__caption= captionStack[itemNumber - 1]
