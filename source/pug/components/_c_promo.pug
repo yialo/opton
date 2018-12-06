@@ -7,13 +7,9 @@ mixin promo()
             li.promo__item(class=`promo__item--${promoItem_options.number}`)
               h3.promo__title= promoItem_options.title
               p.promo__subtitle= promoItem_options.subtitle
-          - let i = 0;
-          while i < promoItemsData.length
+          each value, index  in promoItemsData
             +promo__item({
-              number: i + 1,
-              title: promoItemsData[i].title,
-              subtitle: promoItemsData[i].subtitle
+              number: index + 1,
+              title: value.title,
+              subtitle: value.subtitle
             })
-            - i++;
-
-

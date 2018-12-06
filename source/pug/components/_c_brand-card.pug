@@ -7,7 +7,5 @@ mixin brand-card(brandCard_number)
       ul.brand-card__list
         mixin brand-card__item(brandsItem_text)
           li.brand-card__item= brandsItem_text
-        - let i = 0;
-        while i < brandCardLists[brandCard_number].length
-          +brand-card__item(brandCardLists[brandCard_number][i])
-          - i++;
+        each value, index in brandCardLists[brandCard_number]
+          +brand-card__item(value)
