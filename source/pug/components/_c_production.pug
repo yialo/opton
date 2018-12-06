@@ -10,7 +10,5 @@ mixin production()
               imageLegend: 'Продукция, изображение',
               captionStack: productionProductCardCaptions
             })
-        - let i = 1;
-        while i <= productionProductCardCaptions.length
-          +production__item(i)
-          - i++;
+        each value, index in productionProductCardCaptions
+          +production__item(index + 1)
