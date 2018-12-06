@@ -1,0 +1,8 @@
+mixin button(button_modifier)
+  - let modifierClass = `button--${button_modifier}`;
+  case button_modifier
+    when 'request'
+      a.button(class=modifierClass href='#') Отправить заявку
+    when 'send'
+      button.button(class=modifierClass type='submit')
+        span.button-fix Отправить

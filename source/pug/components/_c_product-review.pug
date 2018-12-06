@@ -1,0 +1,13 @@
+mixin product-review()
+  section.product-review
+    .product-review__inner
+      img.product-review__image(src='img/product-review__image.jpg' alt='ZEISS CONTURA G2')
+      h1.product-review__heading ZEISS CONTURA G2
+      .product-review__download
+        +download()
+      p.product-review__details
+        | CONTURA — широкая платформа от ZEISS для гибкого, надежного и бескомпромиссного обеспечения качества. Последнее поколение еще точнее и предлагает большой пакет оптических датчиков в верхней части большего диапазона измерений. Выдающаяся технология сканирования, справочное программное обеспечение ZEISS CALYPSO и полностью настроенная общая концепция позволяют ZEISS CONTURA закрепить свое место в качестве стандарта в своем классе.
+      .product-review__manufacturer-info
+        +manufacturer-info()
+      .product-review__button-wrapper
+        +button('request')

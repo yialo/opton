@@ -1,0 +1,23 @@
+extends common/_t_default.pug
+
+block variables
+  -
+    const page = {
+      id: 'product',
+      title: 'Карточка продукции',
+      heading: `Zeiss Contura G2`
+    };
+
+block page-main
+  .page-main__product-review
+    +product-review()
+  .page-main__product-features
+    +product-features({
+      modifier: 'advantages',
+      headingText: 'Преимущества'
+    })
+  .page-main__product-features
+    +product-features({
+      modifier: 'types',
+      headingText: 'Четыре подхода к активному сканированию direkt, RDS, aktiv или navigator'
+    })
