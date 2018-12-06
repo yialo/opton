@@ -1,0 +1,11 @@
+mixin brands()
+  .brands
+    .brands__inner
+      ul.brands__list
+        mixin brands__item(brands_itemNumber)
+          li.brands__card
+            +brand-card(brands_itemNumber)
+        - let i = 1;
+        while i <= 9
+          +brands__item(i)
+          - i++;

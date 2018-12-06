@@ -1,9 +1,9 @@
-mixin product-card(componentModifier, itemNumber, imageLegend, captionStack)
-  .product-card(class=`product-card--${componentModifier}`)
+mixin product-card(productCard_options)
+  .product-card(class=`product-card--${productCard_options.componentModifier}`)
     img.product-card__image(
-      src=`img/product-card__image--${itemNumber}`
-      alt=`${imageLegend} №${itemNumber}`
+      src=`img/product-card__image--${productCard_options.itemNumber}`
+      alt=`${productCard_options.imageLegend} №${productCard_options.itemNumber}`
     )
     .product-card__text
-      h3.product-card__caption= captionStack[itemNumber - 1]
+      h3.product-card__caption= productCard_options.captionStack[productCard_options.itemNumber - 1]
       a.product-card__link(href='#') Подробнее

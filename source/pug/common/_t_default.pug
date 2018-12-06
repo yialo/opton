@@ -6,26 +6,29 @@ include _i_data.pug
 include _i_components.pug
 
 doctype html
-html(lang="ru")
+html(lang='ru')
   head
-    meta(charset="utf-8")
+    meta(charset='utf-8')
     title= `${page.title} | ${siteName}`
-    meta(name="description" content="Официальный поставщик измерительного оборудования от ведущих мировых производителей")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    meta(name="cmsmagazine" content="cdc79537f1d9f113c73cd2fd46ca0125")
-    meta(name="author" content="Веб-студия WayToStart")
-    link(rel="preload" href="fonts/roboto-light.woff2" as="font")
-    link(rel="preload" href="fonts/roboto-regular.woff2" as="font")
-    link(rel="preload" href="fonts/roboto-medium.woff2" as="font")
-    link(rel="preload" href="fonts/roboto-bold.woff2" as="font")
-    link(rel="preload" href="fonts/roboto-black.woff2" as="font")
-    link(rel="stylesheet" href="css/main.min.css")
+    meta(name='description' content='Официальный поставщик измерительного оборудования от ведущих мировых производителей')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='cmsmagazine' content='cdc79537f1d9f113c73cd2fd46ca0125')
+    meta(name='author' content='Веб-студия WayToStart')
+    link(rel='preload' href='fonts/roboto-light.woff2' as='font')
+    link(rel='preload' href='fonts/roboto-regular.woff2' as='font')
+    link(rel='preload' href='fonts/roboto-medium.woff2' as='font')
+    link(rel='preload' href='fonts/roboto-bold.woff2' as='font')
+    link(rel='preload' href='fonts/roboto-black.woff2' as='font')
+    link(rel='stylesheet' href='css/main.min.css')
 
-  body.page(class='page--' + page.id)
+  body.page(class=`page--${page.id}`)
     .page__header
-      +page-header(page.id, page.heading)
+      +page-header({
+        pageId: page.id,
+        pageHeading: page.heading
+      })
     .page__main
-      main.page-main(class='page-main--' + page.id)
+      main.page-main(class=`page-main--${page.id}`)
         block page-main
     .page__footer
       +page-footer(page.id)

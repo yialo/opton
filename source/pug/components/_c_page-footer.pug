@@ -2,7 +2,10 @@ mixin page-footer(pageFooter_pageId)
   footer.page-footer
     .page-footer__inner
       .page-footer__navigation
-        +navigation(pageFooter_pageId, 'footer')
+        +navigation({
+          pageId: pageFooter_pageId,
+          componentPosition: 'footer'
+        })
       .page-footer__social
         +social()
       ul.page-footer__contact-list

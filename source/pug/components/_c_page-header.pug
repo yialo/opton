@@ -1,10 +1,18 @@
-mixin page-header(pageHeader_pageId, pageHeader_pageHeading)
-  header.page-header(class='page-header--' + page.id)
+mixin page-header(pageHeader_options)
+  header.page-header(
+    class=`page-header--${pageHeader_options.pageId}`
+    )
     .page-header__inner
       .page-header__logo
-        +logo(pageHeader_pageId, pageHeader_pageHeading)
+        +logo({
+          pageId: pageHeader_options.pageId,
+          pageHeading: pageHeader_options.pageHeading
+        })
       .page-header__navigation
-        +navigation(pageHeader_pageId, 'header')
+        +navigation({
+          pageId: pageHeader_options.pageId,
+          componentPosition: 'header'
+        })
       ul.page-header__contact-list
         li.page-header__contact
           a.page-header__contact-content.page-header__contact-content--email(href='mailto:info@mail.ru')
@@ -13,10 +21,10 @@ mixin page-header(pageHeader_pageId, pageHeader_pageHeading)
           a.page-header__contact-content.page-header__contact-content--tel(href='tel:+74956645520')
             | +7 (495) 664-55-20
     each name in hasBanner
-      if (name === pageHeader_pageId)
+      if (name === pageHeader_options.pageId)
         .page-header__banner
-          +banner(pageHeader_pageHeading)
+          +banner(pageHeader_options.pageHeading)
     each name in hasBreadcrumbs
-      if (name === pageHeader_pageId)
+      if (name === pageHeader_options.pageId)
         .page-header__breadcrumbs
           +breadcrumbs()

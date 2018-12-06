@@ -1,0 +1,8 @@
+mixin brand-card(brandCard_number)
+  .brand-card
+    .brand-card__image
+      +brand-logo(brandCard_number)
+    .brands__text
+      h3.brands__title= brandLogoNames[brandCard_number - 1]
+      ul.brands__list
+        //- +brands__item()

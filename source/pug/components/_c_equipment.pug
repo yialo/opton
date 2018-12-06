@@ -3,14 +3,14 @@ mixin equipment()
     .equipment__inner
       h2.equipment__heading Оборудование
       ul.equipment__list
-        mixin equipment__item(itemNumber)
+        mixin equipment__item(equipment_itemNumber)
           li.equipment__item
-            +product-card(
-              'equipment',
-              itemNumber,
-              'Оборудование',
-              equipmentProductCardCaptions
-            )
+            +product-card({
+              componentModifier: 'equipment',
+              itemNumber: equipment_itemNumber,
+              imageLegend: 'Оборудование',
+              captionStack: equipmentProductCardCaptions
+            })
         - let i = 1;
         while i <= 6
           +equipment__item(i)

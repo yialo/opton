@@ -1,9 +1,9 @@
 mixin social()
   ul.social
-    mixin social__item(itemLinkAddition, itemName)
+    mixin social__item(socialLink_modifier, socialItem_caption)
       li.social__item
-        a.social__link(class='social__link--' + itemLinkAddition href='#')
-          span.visually-hidden= itemName
+        a.social__link(class='social__link--' + socialLink_modifier href='#')
+          span.visually-hidden= socialItem_caption
     +social__item('facebook', 'Facebook')
     +social__item('twitter', 'Twitter')
     +social__item('instagram', 'Instagram')

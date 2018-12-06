@@ -3,10 +3,10 @@ mixin promo()
     .promo__inner
       .promo__slider
         ul.promo__list
-          mixin promo__item(itemNumber, itemTitle, itemSubtitle)
-            li.promo__item(class=`promo__item--${itemNumber}`)
-              h3.promo__title= itemTitle
-              p.promo__subtitle= itemSubtitle
+          mixin promo__item(promoItem_number, promoItem_title, promoItem_subtitle)
+            li.promo__item(class=`promo__item--${promoItem_number}`)
+              h3.promo__title= promoItem_title
+              p.promo__subtitle= promoItem_subtitle
           - let i = 1;
           while i <= 3
             +promo__item(promoItemTitles[i - 1], promoItemSubtitles[i - 1])
