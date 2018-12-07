@@ -32,5 +32,8 @@ html(lang='ru')
         block page-main
     .page__footer
       +page-footer(page.id)
+    if (modalIncluded.includes(page.id))
+      .page__modal
+        +modal()
     block custom-scripts
     script(src='js/picturefill.js')

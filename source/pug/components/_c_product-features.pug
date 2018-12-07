@@ -2,7 +2,7 @@ mixin product-features(productFeatures_options)
   section.product-features(class=`product-features--${productFeatures_options.modifier}`)
     .product-features__inner
       - let productFeaturesHeading_class = 'product-features__heading';
-      if productFeatures_options.modifier === 'advantages'
+      if (productFeatures_options.modifier === 'advantages')
         - productFeaturesHeading_class = 'visually-hidden';
       h2(class=productFeaturesHeading_class)= productFeatures_options.headingText
       ul.product-features__list

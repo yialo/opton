@@ -1,2 +1,45 @@
 mixin modal()
   .modal
+    .modal__inner
+      img.modal__image(
+        src='img/modal__image.jpg'
+        alt='Изображение товара'
+      )
+      p.modal__tip Вы выбрали для заказа модель ZEISS GageMax navigator. Для завершения оформления, пожалуйста, заполните несколько полей ниже для дальнейшей связи с Вами.
+      form.modal__form(
+        name='order'
+        action='https://echo.htmlacademy.ru'
+        method='POST'
+      )
+        .modal__form-item.modal__form-item--fullname
+          +form-item({
+            tag: 'input',
+            type: 'text',
+            id: 'fullname',
+            text: 'Имя'
+          })
+        .modal__form-item.modal__form-item--email
+          +form-item({
+            tag: 'input',
+            type: 'email',
+            id: 'email',
+            text: 'Email'
+          })
+        .modal__form-item.modal__form-item--telephone
+          +form-item({
+            tag: 'input',
+            type: 'tel',
+            id: 'telephone',
+            text: 'Номер телефона'
+          })
+        .modal__form-item.modal__form-item--company
+          +form-item({
+            tag: 'input',
+            type: 'text',
+            id: 'company',
+            text: 'Организация'
+          })
+        .modal__button
+          +button('send')
+        .modal__button
+          +button('cancel')
