@@ -2,3 +2,14 @@ mixin software(software__options)
   .software
     .software__inner
       ul.software__list
+        mixin software__item(software_itemNumber)
+          li.software__item
+            +product-card({
+              componentModifier: 'software',
+              itemNumber: software_itemNumber,
+              captionStack: softwareProductCardCaptions,
+              labelStack: softwareProductCardLabels,
+              descriptionStack: softwareProductCardDescriptions
+            })
+        each value, index in softwareProductCardCaptions
+          +software__item(index + 1)

@@ -1,9 +1,15 @@
 mixin product-card(productCard_options)
   .product-card(class=`product-card--${productCard_options.componentModifier}`)
-    img.product-card__image(
-      src=`img/product-card__image--${productCard_options.itemNumber}`
-      alt=`${productCard_options.imageLegend} №${productCard_options.itemNumber}`
-    )
+    case productCard_options.componentModifier
+      when 'software'
+        span.product-card__label= productCard_options.labelStack[productCard_options.itemNumber - 1]
+      default
+        img.product-card__image(
+          src=`img/product-card__image--${productCard_options.itemNumber}`
+          alt=`${productCard_options.imageLegend} №${productCard_options.itemNumber}`
+        )
     .product-card__text
       h3.product-card__caption= productCard_options.captionStack[productCard_options.itemNumber - 1]
+      if (productCard_options.componentModifier === 'software')
+        p.product-card__details= productCard_options.descriptionStack[productCard_options.itemNumber - 1]
       a.product-card__link(href='#') Подробнее
