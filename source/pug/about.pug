@@ -1,0 +1,15 @@
+extends common/_t_default.pug
+
+block variables
+  -
+    const page = {
+      id: 'about',
+      title: 'О компании',
+      heading: 'О компании'
+    };
+
+block page-main
+  .page-main__about
+    +about({
+      heading: page.heading
+    })
