@@ -3,7 +3,7 @@ mixin navigation(navigation_options)
     ul.navigation__list
       mixin navigation__item(navigationItem_options)
         li.navigation__item
-          - let itemLink = {href: navigationItem_options.path + '.html'};
+          - let itemLink = {href: `${navigationItem_options.path}.html`};
           if (navigationItem_options.path === navigation_options.pageId)
             - itemLink = '';
           a.navigation__link&attributes(itemLink)= navigationItem_options.text
