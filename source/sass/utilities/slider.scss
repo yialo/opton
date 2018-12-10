@@ -1,0 +1,48 @@
+.slider {
+  position: relative;
+}
+
+.slider-body {
+  @for $i from 1 through 3 {
+    .js-slide-#{$i} & {
+      transform: translateX(calc((#{$i} - 1) * -100% / 3));
+    }
+  }
+}
+
+.slider__controls {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.slider__controls-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__control-list {
+  @include list;
+  display: flex;
+  margin-bottom: 0;
+}
+
+.slider__control-item {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.slider__control-button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+
+  &--current {
+    background-color: white;
+  }
+}

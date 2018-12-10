@@ -19,7 +19,7 @@
   text-align: center;
   background-color: white;
 
-  .navigation__item--current & {
+  &--current {
     background-color: #f5f5f5;
   }
 }
