@@ -18,4 +18,8 @@
   padding: 10px 15px;
   text-align: center;
   background-color: white;
+
+  .navigation__item--current & {
+    background-color: #f5f5f5;
+  }
 }

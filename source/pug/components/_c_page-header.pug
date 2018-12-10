@@ -15,10 +15,11 @@ mixin page-header(pageHeader_options)
           span.visually-hidden.page-header__button-text.page-header__button-text--closed Показать главное меню
           span.visually-hidden.page-header__button-text.page-header__button-text--opened Скрыть главное меню
       .page-header__navigation
-        +navigation({
-          pageId: pageHeader_options.pageId,
-          componentPosition: 'header'
-        })
+        .page-header__navigation-wrapper
+          +navigation({
+            pageId: pageHeader_options.pageId,
+            componentPosition: 'header'
+          })
       ul.page-header__contact-list
         li.page-header__contact
           a.page-header__contact-content.page-header__contact-content--email(href='mailto:info@mail.ru')
