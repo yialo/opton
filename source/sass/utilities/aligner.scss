@@ -1,0 +1,7 @@
+.aligner {
+  @include margin-hor;
+  width: $small-min-width;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}

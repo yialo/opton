@@ -5,7 +5,10 @@ mixin logo(logo_options)
       '' : {href: 'index.html'};
   .logo
     a.logo__link&attributes(logo_linkPath)
-      img.logo__image(src='img/logo.png' alt='Opton Engineering')
+      img.logo__image(
+        src='img/logo.svg'
+        width='280' height='16'
+        alt='Opton Engineering'
+      )
     if (logo_options.pageId === 'index')
       h1.visually-hidden= logo_options.pageHeading
-

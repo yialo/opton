@@ -7,7 +7,11 @@
 
 @mixin list {
   margin-top: 0;
-  margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
+}
+
+@mixin margin-hor($marginHorizontal: auto) {
+  margin-left: $marginHorizontal;
+  margin-right: $marginHorizontal;
 }

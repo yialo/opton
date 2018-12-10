@@ -1,0 +1,5 @@
+.navigation__list {
+  @include list;
+  @include font(400, 16px, 19px);
+  margin-bottom: 0;
+}

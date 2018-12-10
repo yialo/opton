@@ -2,12 +2,18 @@ mixin page-header(pageHeader_options)
   header.page-header(
     class=`page-header--${pageHeader_options.pageId}`
     )
-    .page-header__inner
+    .page-header__inner.aligner
       .page-header__logo
         +logo({
           pageId: pageHeader_options.pageId,
           pageHeading: pageHeader_options.pageHeading
         })
+      .page-header__menu-controls
+        button.page-header__button.page-header__button--open(
+          type='button'
+        )
+          span.visually-hidden.page-header__button-text.page-header__button-text--closed Показать главное меню
+          span.visually-hidden.page-header__button-text.page-header__button-text--opened Скрыть главное меню
       .page-header__navigation
         +navigation({
           pageId: pageHeader_options.pageId,

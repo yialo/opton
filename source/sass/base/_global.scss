@@ -9,10 +9,9 @@ html {
 }
 
 body {
+  @include font;
   min-width: $small-min-width;
   margin: 0;
-
-  @include font;
   color: black;
   background-color: white;
 }
