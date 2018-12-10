@@ -5,6 +5,4 @@ const pageHeaderButtonTextOpened = pageHeader.querySelector('.page-header__butto
 
 pageHeaderButton.addEventListener('click', function (evt) {
   pageHeader.classList.toggle('is-visible');
-  pageHeaderButton.classList.toggle('page-header__button--close');
-  pageHeaderButton.classList.toggle('page-header__button--open');
 });
