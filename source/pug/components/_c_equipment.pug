@@ -1,7 +1,8 @@
 mixin equipment()
   section.equipment
-    .equipment__inner
-      h2.equipment__heading Оборудование
+    .equipment__inner.aligner
+      h2.equipment__heading
+        span.equipment__heading-string Оборудование
       ul.equipment__list
         mixin equipment__item(equipment_itemNumber)
           li.equipment__item
