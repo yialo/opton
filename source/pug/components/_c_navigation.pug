@@ -2,10 +2,14 @@ mixin navigation(navigation_options)
   nav.navigation(class=`navigation--${navigation_options.componentPosition}`)
     ul.navigation__list
       mixin navigation__item(navigationItem_options)
-        li.navigation__item
-          - let itemLink = {href: `${navigationItem_options.path}.html`};
-          if (navigationItem_options.path === navigation_options.pageId)
-            - itemLink = '';
+        -
+          let itemLink = {href: `${navigationItem_options.path}.html`};
+          let currentClass = '';
+        if (navigationItem_options.path === navigation_options.pageId)
+          -
+            itemLink = '';
+            currentClass = {class: 'navigation__item--current'};
+        li.navigation__item&attributes(currentClass)
           a.navigation__link&attributes(itemLink)= navigationItem_options.text
       each value, key in navigationData
         +navigation__item({
