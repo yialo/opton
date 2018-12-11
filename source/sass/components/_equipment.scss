@@ -1,6 +1,6 @@
 .equipment__inner {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -8,7 +8,7 @@
 .equipment__heading {
   @include font(700, 32px, 32px);
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   text-transform: uppercase;
 }
 
