@@ -21,6 +21,8 @@
 
 .navigation__item {
   .navigation--header & {
+    border-left: 1px solid $gray-border;
+    border-right: 1px solid $gray-border;
     border-bottom: 1px solid $gray-border;
 
     &:first-child {
@@ -35,9 +37,19 @@
     padding: 10px 15px;
     text-align: center;
     background-color: white;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+
+    &:hover {
+      background-color: $gray-intro-bg;
+    }
 
     &--current {
-      background-color: $gray-intro-bg;
+      background-color: $gray-border;
+
+      &:hover {
+        background-color: $gray-border;
+      }
     }
   }
 }
