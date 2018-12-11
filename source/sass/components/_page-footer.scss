@@ -9,15 +9,24 @@
   padding-right: 20px;
 }
 
-.page-footer__contact-list {
-  @include list;
-  margin-bottom: 0;
-}
-
 .page-footer__navigation {
   margin-bottom: 40px;
 }
 
 .page-footer__social {
   margin-bottom: 40px;
+}
+
+.page-footer__contact-list {
+  @include list;
+  @include font(500, 16px, 19px);
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+}
+
+.page-footer__contact {
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
