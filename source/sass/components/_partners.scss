@@ -1,0 +1,16 @@
+.partners__inner {
+  padding-top: 30px;
+}
+
+.partners__heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.partners__list {
+  @include list;
+  display: flex;
+  margin-bottom: 0;
+}

@@ -1,0 +1,19 @@
+.social {
+  @include list;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 72px;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: red;
+}
