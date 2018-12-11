@@ -6,29 +6,8 @@
 }
 
 .equipment__heading {
-  @include font(700, 32px, 32px);
   margin-top: 0;
   margin-bottom: 40px;
-  text-transform: uppercase;
-}
-
-.equipment__heading-string {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 0;
-    height: 6px;
-    background-color: $blue;
-    transition: width 0.25s;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
 }
 
 .equipment__list {

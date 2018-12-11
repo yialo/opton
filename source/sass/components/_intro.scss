@@ -1,0 +1,38 @@
+.intro {
+  background-color: $gray-intro-bg;
+}
+
+.intro__inner {
+  display: grid;
+  grid-template-columns: auto minmax(110px, auto);
+  grid-template-rows: minmax(157px, auto) auto;
+  grid-row-gap: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.intro__image-wrapper {
+  justify-self: end;
+}
+
+.intro__image {
+  grid-area: 1 / 2 / 2 / 3;
+  display: block;
+}
+
+.intro__heading {
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 10px;
+}
+
+.intro__description {
+  @include font(400, 16px, 21px);
+  grid-area: 2 / 1 / 3 / 3;
+  margin-top: 0;
+  margin-bottom: 0;
+}

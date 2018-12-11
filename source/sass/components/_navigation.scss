@@ -1,25 +1,32 @@
 .navigation__list {
   @include list;
-  @include font(400, 16px, 19px);
-  width: 100%;
   margin-bottom: 0;
+
+  .navigation--header & {
+    @include font(400, 16px, 19px);
+    width: 100%;
+  }
 }
 
 .navigation__item {
-  border-bottom: 1px solid $gray-border;
+  .navigation--header & {
+    border-bottom: 1px solid $gray-border;
 
-  &:first-child {
-    border-top: 1px solid $gray-border;
+    &:first-child {
+      border-top: 1px solid $gray-border;
+    }
   }
 }
 
 .navigation__link {
-  display: block;
-  padding: 10px 15px;
-  text-align: center;
-  background-color: white;
+  .navigation--header & {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: white;
 
-  &--current {
-    background-color: #f5f5f5;
+    &--current {
+      background-color: $gray-intro-bg;
+    }
   }
 }
