@@ -1,8 +1,8 @@
 mixin promo()
   header.promo
     .promo__slider.slider.js-slide-2
-      .promo__slider-container.slider-container
-        ul.promo__list.slider-body
+      .promo__slider-container.slider__container
+        ul.promo__list.slider__body
           mixin promo__item(promoItem_options)
             li.promo__item(class=`promo__item--${promoItem_options.number}`)
               .promo__inner.aligner

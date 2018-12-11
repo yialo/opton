@@ -2,7 +2,11 @@
   position: relative;
 }
 
-.slider-body {
+.slider__container {
+  overflow: hidden;
+}
+
+.slider__body {
   @for $i from 1 through 3 {
     .js-slide-#{$i} & {
       transform: translateX(calc((#{$i} - 1) * -100% / 3));
