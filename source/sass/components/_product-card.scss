@@ -1,0 +1,31 @@
+.product-card {
+  padding-top: 16px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.05);
+}
+
+.product-card__image {
+  @include margin-hor;
+  display: block;
+}
+
+.product-card__text {
+  text-align: center;
+}
+
+.product-card__caption {
+  @include font(500, 18px, 27px);
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.product-card__link {
+  @include font(500, 16px, 19px);
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  color: $blue;
+}

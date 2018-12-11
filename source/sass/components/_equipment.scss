@@ -1,5 +1,6 @@
 .equipment__inner {
-  padding-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -7,7 +8,7 @@
 .equipment__heading {
   @include font(700, 32px, 32px);
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   text-transform: uppercase;
 }
 
@@ -28,4 +29,11 @@
   &:hover::after {
     width: 100%;
   }
+}
+
+.equipment__list {
+  @include list;
+  display: grid;
+  grid-column-gap: 23px;
+  margin-bottom: 0;
 }
