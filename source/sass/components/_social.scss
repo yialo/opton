@@ -1,3 +1,5 @@
+$social-icon-names: (facebook, twitter, instagram);
+
 .social {
   @include list;
   display: flex;
@@ -7,7 +9,7 @@
 
 .social__item {
   &:not(:last-child) {
-    margin-right: 72px;
+    margin-right: 32px;
   }
 }
 
@@ -15,5 +17,13 @@
   display: block;
   width: 24px;
   height: 24px;
-  background-color: red;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @each $value in $social-icon-names {
+    &--#{$value} {
+      background-image: url("../img/icon-#{$value}.svg");
+    }
+  }
 }
