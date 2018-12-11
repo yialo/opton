@@ -1,0 +1,21 @@
+.banner {
+  background-color: #4a5559;
+  background-image: url("../img/banner--small.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.banner__inner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.banner__heading {
+  @include font(900, 32px, 36px);
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: white;
+}

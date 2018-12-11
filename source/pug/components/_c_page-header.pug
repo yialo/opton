@@ -2,7 +2,7 @@ mixin page-header(pageHeader_options)
   header.page-header(
     class=`page-header--${pageHeader_options.pageId}`
     )
-    .page-header__inner.aligner
+    .page-header__base.aligner
       .page-header__logo
         +logo({
           pageId: pageHeader_options.pageId,
