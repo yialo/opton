@@ -1,9 +1,12 @@
 .production__inner {
+  padding-bottom: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .production__list {
   @include list;
+  display: grid;
+  grid-row-gap: 20px;
   margin-bottom: 0;
 }
