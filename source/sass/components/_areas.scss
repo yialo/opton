@@ -1,0 +1,19 @@
+.areas__inner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.areas__description {
+  @include font(400, 18px, 21px);
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.areas__list {
+  @include list;
+  display: grid;
+  grid-row-gap: 20px;
+  margin-bottom: 0;
+}
