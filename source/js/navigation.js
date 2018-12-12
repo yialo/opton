@@ -6,3 +6,10 @@ const pageHeaderButtonTextOpened = pageHeader.querySelector('.page-header__butto
 pageHeaderButton.addEventListener('click', function () {
   pageHeader.classList.toggle('is-visible');
 });
+
+window.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27 && pageHeader.classList.contains('is-visible')) {
+    evt.preventDefault();
+    pageHeader.classList.toggle('is-visible');
+  }
+});
