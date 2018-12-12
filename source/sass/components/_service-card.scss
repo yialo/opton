@@ -3,6 +3,11 @@
   display: block;
 }
 
+.service-card__image {
+  display: block;
+  border-radius: 16px;
+}
+
 .service-card__text {
   position: absolute;
   bottom: 0;
@@ -14,6 +19,13 @@
   padding-right: 20px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 0 0 16px 16px;
+  transition-property: padding;
+  transition-duration: 0.2s;
+
+  .service-card__link:hover & {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .service-card__caption {
