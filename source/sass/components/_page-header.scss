@@ -102,7 +102,7 @@
   position: absolute;
   top: 36px;
   right: 0;
-  z-index: 1;
+  z-index: 0;
   width: 250px;
   overflow: hidden;
 }
@@ -110,6 +110,7 @@
 .page-header__navigation-wrapper {
   transform: translateY(-100%);
   transition: transform 0.5s;
+  z-index: 1;
 
   .is-visible & {
     transform: translateX(0);
