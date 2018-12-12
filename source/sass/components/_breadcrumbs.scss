@@ -1,0 +1,18 @@
+.breadcrumbs__list {
+  @include list;
+  @include font(400, 14px, 16px);
+  display: flex;
+  margin-bottom: 0;
+  color: #cccccc;
+}
+
+.breadcrumbs__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+
+    &::after {
+      content: "/";
+      margin-left: 10px;
+    }
+  }
+}
