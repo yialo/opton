@@ -1,6 +1,5 @@
 .navigation__list {
   @include list;
-  margin-bottom: 0;
 
   .navigation--header & {
     @include font(400, 16px, 19px);

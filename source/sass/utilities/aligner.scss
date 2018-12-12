@@ -1,3 +1,6 @@
+//TODO: удалить временны outline
+//TODO: возможно, перенести сюда padding-left, padding-right
+
 .aligner {
   @include margin-hor;
   width: $small-min-width;

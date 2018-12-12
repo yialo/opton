@@ -1,10 +1,14 @@
 .brand-logo {
-  width: 199px;
-  height: 102px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 .brand-logo__image {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 199px;
+  height: 102px;
 }
