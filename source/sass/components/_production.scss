@@ -1,0 +1,9 @@
+.production__inner {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.production__list {
+  @include list;
+  margin-bottom: 0;
+}
