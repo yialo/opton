@@ -19,6 +19,7 @@
 }
 
 .page-header__menu-controls {
+  align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,7 +126,7 @@
 
 .page-header__contact-list {
   @include list;
-  @include font(500, 14px, 16px);
+  @include font(500, 16px, 24px);
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
@@ -137,6 +138,10 @@
 .page-header__contact {
   width: 100%;
   text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .page-header__breadcrumbs {
