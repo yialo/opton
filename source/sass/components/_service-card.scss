@@ -1,0 +1,24 @@
+.service-card__link {
+  position: relative;
+  display: block;
+}
+
+.service-card__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 16px 16px;
+}
+
+.service-card__caption {
+  @include font(500, 28px, 33px);
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+}

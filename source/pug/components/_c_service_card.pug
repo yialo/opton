@@ -1,9 +1,14 @@
 mixin service-card(serviceCard_options)
   .service-card(class=`service-card--${serviceCard_options.componentModifier}`)
     a.service-card__link(href='#')
-      img.service-card__image(
-        src=`${serviceCard_options.componentModifier}-service-card__image--${serviceCard_options.itemNumber}`
-        alt=serviceCard_options.captionStack[serviceCard_options.itemNumber - 1]
-      )
+      picture
+        source(
+          media=viewportMediumMinWidth
+          srcset=`img/${serviceCard_options.componentModifier}-service-card__image--${serviceCard_options.itemNumber}-medium.png`
+        )
+        img.service-card__image(
+          src=`img/${serviceCard_options.componentModifier}-service-card__image--${serviceCard_options.itemNumber}-small.png`
+          alt=serviceCard_options.captionStack[serviceCard_options.itemNumber - 1]
+        )
       .service-card__text
         h3.service-card__caption= serviceCard_options.captionStack[serviceCard_options.itemNumber - 1]

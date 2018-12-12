@@ -1,14 +1,14 @@
 mixin services(services_heading)
   .services
-    .services__inner
-    h1.services__heading= services_heading
-    ul.services__list
-      mixin services__item(servicesItem_number)
-        li.services__item
-          +service-card({
-            componentModifier: 'services',
-            itemNumber: servicesItem_number,
-            captionStack: servicesServiceCardCaptions
-          })
-      each value, index in servicesServiceCardCaptions
-        +services__item(index + 1)
+    .services__inner.aligner
+      h1.services__heading= services_heading
+      ul.services__list
+        mixin services__item(servicesItem_number)
+          li.services__item
+            +service-card({
+              componentModifier: 'services',
+              itemNumber: servicesItem_number,
+              captionStack: servicesServiceCardCaptions
+            })
+        each value, index in servicesServiceCardCaptions
+          +services__item(index + 1)
