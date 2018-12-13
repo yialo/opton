@@ -1,7 +1,7 @@
 ymaps.ready(init);
 
 function init() {
-  var mapCenter = [55.76796, 37.531756];
+  var mapCenter = [55.710641, 37.688288];
   var mapElement = document.getElementById('map');
   var mapOptions = {
       center: mapCenter,
