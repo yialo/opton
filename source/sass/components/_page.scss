@@ -6,6 +6,10 @@
   .page--contacts & {
     margin-bottom: 30px;
   }
+
+  .page--software & {
+    margin-bottom: 20px;
+  }
 }
 
 .page__order-request {
@@ -15,4 +19,14 @@
   z-index: 2;
   width: 100%;
   min-height: 100%;
+}
+
+.page__main {
+  .page--production & {
+    margin-bottom: 30px;
+  }
+
+  .page--software & {
+    margin-bottom: 30px;
+  }
 }

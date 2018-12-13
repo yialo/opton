@@ -2,7 +2,7 @@
   @include list;
   @include font(400, 14px, 16px);
   display: flex;
-  color: #cccccc;
+  color: $gray-breadcrumbs;
 }
 
 .breadcrumbs__item {
