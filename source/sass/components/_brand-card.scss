@@ -1,0 +1,21 @@
+.brand-card__image {
+  margin-bottom: 20px;
+}
+
+.brand-card__title {
+  @include font(700, 32px, 38px);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.brand-card__list {
+  @include list;
+  @include font(400, 16px, 23px);
+  padding-left: 10px;
+}
+
+.brand-card__item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
