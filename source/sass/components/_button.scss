@@ -1,11 +1,22 @@
 .button {
   @include font(900, 16px, 19px);
   display: block;
-  padding: 20px 64px 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   text-align: center;
   text-transform: uppercase;
   color: white;
   background-color: $blue;
   border-style: none;
   border-radius: 8px;
+
+  &--request {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &--send {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
 }
