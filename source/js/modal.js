@@ -1,23 +1,30 @@
-const pageWithModal = document.querySelector('.page--contains-modal');
-const modalOpenButton = document.querySelector('.page__modal-opener');
-const modalCloseButton = document.querySelector('.page__modal-closer');
+const pageWithModal = document.querySelector('.modal');
+const modalOverlay = pageWithModal.querySelector('.modal__overlay');
+const modalOpenButton = pageWithModal.querySelector('.modal__open-button');
+const modalCloseButton = pageWithModal.querySelector('.modal__close-button');
 
 modalOpenButton.addEventListener('click', function (evt) {
-  if (!pageWithModal.classList.contains('js-modal-is-visible')) {
+  if (!pageWithModal.classList.contains('is-visible')) {
     evt.preventDefault();
-    pageWithModal.classList.add('js-modal-is-visible');
+    pageWithModal.classList.add('is-visible');
   }
 });
 
 modalCloseButton.addEventListener('click' , function (evt) {
-  if (pageWithModal.classList.contains('js-modal-is-visible')) {
-    pageWithModal.classList.remove('js-modal-is-visible');
+  if (pageWithModal.classList.contains('is-visible')) {
+    pageWithModal.classList.remove('is-visible');
+  }
+});
+
+modalOverlay.addEventListener('click', function () {
+  if (pageWithModal.classList.contains('is-visible')) {
+    pageWithModal.classList.remove('is-visible');
   }
 });
 
 window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27 && pageWithModal.classList.contains('js-modal-is-visible')) {
+  if (evt.keyCode === 27 && pageWithModal.classList.contains('is-visible')) {
     evt.preventDefault();
-    pageWithModal.classList.remove('js-modal-is-visible');
+    pageWithModal.classList.remove('is-visible');
   }
 });

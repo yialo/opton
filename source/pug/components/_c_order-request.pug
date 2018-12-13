@@ -1,54 +1,54 @@
-mixin modal(modal_options)
-  section.modal
-    .modal__overlay
-    .modal__container
+mixin order-request()
+  section.order-request
+    .order-request__overlay.modal__overlay
+    .order-request__container
       h2.visually-hidden Форма заявки
-      button.modal__close-button(class=`${modal_options.parentBlockClassname}-closer`)
+      button.order-request__close-button.modal__close-button
       picture
         source(
           media=viewportMediumMinWidth
-          srcset='img/modal__image--medium.jpg'
+          srcset='img/order-request__image--medium.jpg'
         )
-        img.modal__image(
-          src='img/modal__image--small.jpg'
+        img.order-request__image(
+          src='img/order-request__image--small.jpg'
           alt='Изображение товара'
         )
-      p.modal__tip
+      p.order-request__tip
         | Вы выбрали для заказа модель ZEISS GageMax navigator. Для завершения оформления, пожалуйста, заполните несколько полей ниже для дальнейшей связи с Вами.
-      form.modal__form(
+      form.order-request__form(
         name='order'
         action='https://echo.htmlacademy.ru'
         method='POST'
       )
-        .modal__form-item.modal__form-item--fullname
+        .order-request__form-item.order-request__form-item--fullname
           +form-item({
             tag: 'input',
             type: 'text',
             id: 'fullname',
             text: 'Имя'
           })
-        .modal__form-item.modal__form-item--email
+        .order-request__form-item.order-request__form-item--email
           +form-item({
             tag: 'input',
             type: 'email',
             id: 'email',
             text: 'Email'
           })
-        .modal__form-item.modal__form-item--telephone
+        .order-request__form-item.order-request__form-item--telephone
           +form-item({
             tag: 'input',
             type: 'tel',
             id: 'telephone',
             text: 'Номер телефона'
           })
-        .modal__form-item.modal__form-item--company
+        .order-request__form-item.order-request__form-item--company
           +form-item({
             tag: 'input',
             type: 'text',
             id: 'company',
             text: 'Организация'
           })
-        .modal__button
+        .order-request__button
           +button({
             typeModifier: 'send'
           })

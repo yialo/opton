@@ -1,0 +1,58 @@
+.order-request {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.order-request__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.order-request__container {
+  @include margin-hor;
+  position: relative;
+  max-width: 500px;
+  min-width: calc(#{$small-min-width} - 20px);
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.order-request__image {
+  display: block;
+}
+
+.order-request__tip {
+  @include font(400, 16px, 20px);
+}
+
+.order-request__form {
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+.order-request__button {
+  margin-top: 10px;
+}
+
+.order-request__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  background-image: url("../img/modal__close-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-style: none;
+}

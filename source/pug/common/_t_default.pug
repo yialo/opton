@@ -23,10 +23,10 @@ html(lang='ru')
     link(rel='preload' href='fonts/roboto-black.woff2' as='font')
     link(rel='stylesheet' href='css/main.min.css')
 
-  - let bodyModalModifier = '';
+  - let bodyModalClass = '';
   if (modalIncluded.includes(page.id))
-    - bodyModalModifier = {class: 'page--contains-modal'};
-  body.page(class=`page--${page.id}`)&attributes(bodyModalModifier)
+    - bodyModalClass = {class: 'modal'};
+  body.page(class=`page--${page.id}`)&attributes(bodyModalClass)
     .page__header
       +page-header({
         pageId: page.id,
@@ -38,10 +38,8 @@ html(lang='ru')
     .page__footer
       +page-footer(page.id)
     if (modalIncluded.includes(page.id))
-      .page__modal
-        +modal({
-          parentBlockClassname: 'page__modal'
-        })
+      .page__order-request.modal__window
+        +order-request()
     block custom-scripts
     script(src='js/picturefill.js')
     script(src='js/navigation.js')
