@@ -7,11 +7,17 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   &::placeholder {
+    font-weight: 300;
     color: #333333;
   }
 
   &:focus {
     border-color: $blue;
     box-shadow: 0 0 6px 0 rgba(112, 186, 255, 0.5);
+  }
+
+  &--message {
+    height: 100px;
+    resize: none;
   }
 }

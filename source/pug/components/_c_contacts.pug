@@ -30,7 +30,8 @@ mixin contacts(contacts_options)
               tag: 'input',
               type: 'text',
               id: 'firstname',
-              text: 'Имя'
+              text: 'Имя',
+              isRequired: true
             })
           li.contacts__form-item.contacts__form-item--lastname
             +form-item({
@@ -44,20 +45,23 @@ mixin contacts(contacts_options)
               tag: 'input',
               type: 'tel',
               id: 'telephone',
-              text: 'Номер телефона'
+              text: 'Номер телефона',
+              isRequired: true
             })
           li.contacts__form-item.contacts__form-item--email
             +form-item({
               tag: 'input',
               type: 'email',
               id: 'email',
-              text: 'Email'
+              text: 'Email',
+              isRequired: true
             })
           li.contacts__form-item.contacts__form-item--textarea
             +form-item({
               tag: 'textarea',
               id: 'message',
-              text: 'Введите текст'
+              text: 'Введите текст',
+              isRequired: true
             })
         .contacts__button
           +button({

@@ -48,8 +48,12 @@ mixin order-request()
             id: 'company',
             text: 'Организация'
           })
-        .order-request__button
+        .order-request__button-wrapper
           +button({
             typeModifier: 'send'
           })
-        .order-request__cancel-button.modal__cancel-button
+        .order-request__button-wrapper
+          button.order-request__cancel-button.modal__cancel-button(
+            type='button'
+          )
+            span.button-fix Отмена
