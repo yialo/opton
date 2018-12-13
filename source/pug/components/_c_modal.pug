@@ -5,7 +5,8 @@ mixin modal()
         src='img/modal__image.jpg'
         alt='Изображение товара'
       )
-      p.modal__tip Вы выбрали для заказа модель ZEISS GageMax navigator. Для завершения оформления, пожалуйста, заполните несколько полей ниже для дальнейшей связи с Вами.
+      p.modal__tip.paragraph
+        | Вы выбрали для заказа модель ZEISS GageMax navigator. Для завершения оформления, пожалуйста, заполните несколько полей ниже для дальнейшей связи с Вами.
       form.modal__form(
         name='order'
         action='https://echo.htmlacademy.ru'

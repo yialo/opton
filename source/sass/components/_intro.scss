@@ -9,8 +9,6 @@
   grid-row-gap: 30px;
   padding-top: 20px;
   padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .intro__image-wrapper {
@@ -33,7 +31,6 @@
 }
 
 .intro__description {
-  @include font(400, 16px, 21px);
   grid-area: 2 / 1 / 3 / 3;
   margin-top: 0;
   margin-bottom: 0;
