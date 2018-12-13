@@ -1,7 +1,7 @@
 mixin partners()
   section.partners
-    .partners__inner.aligner
-      h2.partners__heading.underlined-heading
+    .partners__inner
+      h2.partners__heading.underlined-heading.aligner
         span.underlined-heading__string Партнёры
       .partners__slider
         div.partners__list
@@ -10,4 +10,3 @@ mixin partners()
               +brand-logo(partnersItem_number)
           each value, index in brandCardLists
             +partners__item(index)
-
