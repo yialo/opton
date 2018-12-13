@@ -4,10 +4,10 @@ mixin service-card(serviceCard_options)
       picture
         source(
           media=viewportMediumMinWidth
-          srcset=`img/${serviceCard_options.componentModifier}-service-card__image--${serviceCard_options.itemNumber}-medium.png`
+          srcset=`img/${serviceCard_options.componentModifier}-service-card__image--${serviceCard_options.itemNumber}-medium.jpg`
         )
         img.service-card__image(
-          src=`img/${serviceCard_options.componentModifier}-service-card__image--${serviceCard_options.itemNumber}-small.png`
+          src=`img/${serviceCard_options.componentModifier}-service-card__image--${serviceCard_options.itemNumber}-small.jpg`
           alt=serviceCard_options.captionStack[serviceCard_options.itemNumber - 1]
         )
       .service-card__text
