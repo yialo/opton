@@ -1,7 +1,10 @@
 mixin contacts(contacts_options)
   .contacts
-    .contacts__inner
-      h1.contacts__heading= contacts_options.heading
+    .contacts__inner.aligner
+      h1(class=[
+        'contacts__heading',
+        'heading'
+      ])= contacts_options.heading
       ul.contacts__list
         li.contacts__item.contacts__item--address
           h3.contacts__caption Адрес
@@ -21,39 +24,40 @@ mixin contacts(contacts_options)
         action='https://echo.htmlacademy.ru'
         method='POST'
       )
-        .contacts__form-item.contacts__form-item--firstname
-          +form-item({
-            tag: 'input',
-            type: 'text',
-            id: 'firstname',
-            text: 'Имя'
-          })
-        .contacts__form-item.contacts__form-item--lastname
-          +form-item({
-            tag: 'input',
-            type: 'text',
-            id: 'lastname',
-            text: 'Фамилия'
-          })
-        .contacts__form-item.contacts__form-item--telephone
-          +form-item({
-            tag: 'input',
-            type: 'tel',
-            id: 'telephone',
-            text: 'Номер телефона'
-          })
-        .contacts__form-item.contacts__form-item--email
-          +form-item({
-            tag: 'input',
-            type: 'email',
-            id: 'email',
-            text: 'Email'
-          })
-        .contacts__form-item.contacts__form-item--textarea
-          +form-item({
-            tag: 'textarea',
-            id: 'message',
-            text: 'Введите текст'
-          })
+        ul.contacts__form-list
+          li.contacts__form-item.contacts__form-item--firstname
+            +form-item({
+              tag: 'input',
+              type: 'text',
+              id: 'firstname',
+              text: 'Имя'
+            })
+          li.contacts__form-item.contacts__form-item--lastname
+            +form-item({
+              tag: 'input',
+              type: 'text',
+              id: 'lastname',
+              text: 'Фамилия'
+            })
+          li.contacts__form-item.contacts__form-item--telephone
+            +form-item({
+              tag: 'input',
+              type: 'tel',
+              id: 'telephone',
+              text: 'Номер телефона'
+            })
+          li.contacts__form-item.contacts__form-item--email
+            +form-item({
+              tag: 'input',
+              type: 'email',
+              id: 'email',
+              text: 'Email'
+            })
+          li.contacts__form-item.contacts__form-item--textarea
+            +form-item({
+              tag: 'textarea',
+              id: 'message',
+              text: 'Введите текст'
+            })
         .contacts__button
           +button('send')

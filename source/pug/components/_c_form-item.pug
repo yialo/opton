@@ -7,7 +7,8 @@ mixin form-item(formItem_options)
       when 'textarea'
         textarea.form-item__field(
           id=formItem_options.id
-        )= formItem_options.text
+          placeholder=formItem_options.text
+        )
       default
         input.form-item__field(
           type=formItem_options.type

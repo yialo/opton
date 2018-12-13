@@ -1,0 +1,17 @@
+.form-item__field {
+  @include font(400, 16px, 23px);
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 14px 24px 11px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &::placeholder {
+    color: #333333;
+  }
+
+  &:focus {
+    border-color: $blue;
+    box-shadow: 0 0 6px 0 rgba(112, 186, 255, 0.5);
+  }
+}
