@@ -1,0 +1,14 @@
+.product-review__image {
+  display: block;
+}
+
+.product-review__heading {
+  @include font(700, 28px, 42px);
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.product-review__deteils {
+  margin-top: 0;
+}

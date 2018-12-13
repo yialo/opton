@@ -1,7 +1,12 @@
 mixin product-review(productRevies_heading)
   section.product-review
-    .product-review__inner
-      img.product-review__image(src='img/product-review__image.jpg' alt='ZEISS CONTURA G2')
+    .product-review__inner.aligner
+      picture
+        source(
+          media=viewportMediumMinWidth
+          srcset='img/product-review__image--medium.jpg'
+        )
+        img.product-review__image(src='img/product-review__image--small.jpg' alt='ZEISS CONTURA G2')
       h1.product-review__heading= productRevies_heading
       .product-review__download
         +download()

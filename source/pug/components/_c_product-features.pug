@@ -1,6 +1,6 @@
 mixin product-features(productFeatures_options)
   section.product-features(class=`product-features--${productFeatures_options.modifier}`)
-    .product-features__inner
+    .product-features__inner.aligner
       - let productFeaturesHeading_class = 'product-features__heading';
       if (productFeatures_options.modifier === 'advantages')
         - productFeaturesHeading_class = 'visually-hidden';

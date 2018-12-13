@@ -2,6 +2,7 @@
   @include list;
   @include font(400, 14px, 16px);
   display: flex;
+  flex-wrap: wrap;
   color: $gray-breadcrumbs;
 }
 
