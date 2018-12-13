@@ -1,11 +1,19 @@
-mixin modal()
-  .modal
-    .modal__inner
-      img.modal__image(
-        src='img/modal__image.jpg'
-        alt='Изображение товара'
-      )
-      p.modal__tip.paragraph
+mixin modal(modal_options)
+  section.modal
+    .modal__overlay
+    .modal__container
+      h2.visually-hidden Форма заявки
+      button.modal__close-button(class=`${modal_options.parentBlockClassname}-closer`)
+      picture
+        source(
+          media=viewportMediumMinWidth
+          srcset='img/modal__image--medium.jpg'
+        )
+        img.modal__image(
+          src='img/modal__image--small.jpg'
+          alt='Изображение товара'
+        )
+      p.modal__tip
         | Вы выбрали для заказа модель ZEISS GageMax navigator. Для завершения оформления, пожалуйста, заполните несколько полей ниже для дальнейшей связи с Вами.
       form.modal__form(
         name='order'
@@ -41,6 +49,6 @@ mixin modal()
             text: 'Организация'
           })
         .modal__button
-          +button('send')
-        .modal__button
-          +button('cancel')
+          +button({
+            typeModifier: 'send'
+          })

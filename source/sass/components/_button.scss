@@ -1,6 +1,8 @@
 .button {
   @include font(900, 16px, 19px);
   display: block;
+  min-width: auto;
+  width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
   text-align: center;

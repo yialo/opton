@@ -1,8 +1,8 @@
-mixin button(button_modifier)
-  - let modifierClass = `button--${button_modifier}`;
-  case button_modifier
+mixin button(button_options)
+  - let modifierClass = `button--${button_options.typeModifier}`;
+  case button_options.typeModifier
     when 'request'
-      a.button(class=modifierClass href='#') Отправить заявку
+      a.button.page__modal-opener(class=modifierClass href='#') Отправить заявку
     when 'send'
       button.button(class=modifierClass type='submit')
         span.button-fix Отправить

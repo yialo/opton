@@ -1,5 +1,29 @@
+.page {
+  &--contains-modal {
+    &.js-modal-is-visible {
+      overflow: hidden;
+    }
+  }
+}
+
 .page__header {
   .page--production & {
     margin-bottom: 20px;
+  }
+}
+
+.page__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  min-height: 100%;
+
+  .page.js-modal-is-visible & {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 }

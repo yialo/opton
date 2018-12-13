@@ -60,4 +60,6 @@ mixin contacts(contacts_options)
               text: 'Введите текст'
             })
         .contacts__button
-          +button('send')
+          +button({
+            typeModifier: 'send'
+          })
