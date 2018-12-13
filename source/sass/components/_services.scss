@@ -6,9 +6,8 @@
 }
 
 .services__heading {
-  @include font(900, 32px, 40px);
   margin-top: 0;
-  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .services__list {

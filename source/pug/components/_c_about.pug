@@ -1,7 +1,10 @@
 mixin about(about_options)
   .about
-    .about__inner
-      h1.about__heading= about_options.heading
+    .about__inner.aligner
+      h1(class=[
+        'about__heading',
+        'heading'
+      ])= about_options.heading
       p.about__paragraph.
         Компания ОПТОН Инжиниринг – официальный поставщик измерительного оборудования от ведущих мировых производителей: Carl Zeiss, FARO, Jenoptik, OGP, Alicona и др.
       p.about__paragraph.

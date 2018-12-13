@@ -1,8 +1,12 @@
 mixin equipment()
   section.equipment
     .equipment__inner.aligner
-      h2.equipment__heading.underlined-heading
-        span.underlined-heading__string Оборудование
+      h2(class=[
+        'equipment__heading',
+        'heading',
+        'heading--underlined'
+      ])
+        span.heading__string Оборудование
       ul.equipment__list
         mixin equipment__item(equipment_itemNumber)
           li.equipment__item

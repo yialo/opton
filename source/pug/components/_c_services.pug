@@ -1,7 +1,10 @@
 mixin services(services_heading)
   .services
     .services__inner.aligner
-      h1.services__heading= services_heading
+      h1(class=[
+        'services__heading',
+        'heading'
+      ])= services_heading
       ul.services__list
         mixin services__item(servicesItem_number)
           li.services__item
