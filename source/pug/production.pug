@@ -10,4 +10,7 @@ block variables
 
 block page-main
   .page-main__production
-    +production()
+    +product-catalog({
+      modifier: 'production',
+      heading: page.heading
+    })

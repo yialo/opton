@@ -12,7 +12,10 @@ block page-main
   .page-main__promo
     +promo()
   .page-main__equipment
-    +equipment()
+    +product-catalog({
+      modifier: 'equipment',
+      heading: page.heading
+    })
   .page-main__intro
     +intro()
   .page-main__partners
