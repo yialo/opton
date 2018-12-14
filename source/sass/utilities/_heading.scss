@@ -3,7 +3,12 @@
   text-transform: uppercase;
 
   &--underlined {
-    @include font(700, 32px, 40px);
+    font-weight: 700;
+  }
+
+  @media (min-width: $medium-min-width) {
+    font-size: 48px;
+    line-height: 56px;
   }
 }
 
