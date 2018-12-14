@@ -3,6 +3,7 @@ mixin intro()
     .intro__inner.aligner
       picture.intro__image-wrapper
         source(media=viewportLargeMinWidth srcset='img/intro--large.jpg')
+        source(media=viewportMediumMinWidth srcset='img/intro--medium.jpg')
         img.intro__image(src='img/intro--small.jpg' alt='Микроскоп')
       h2(class=[
         'intro__heading',

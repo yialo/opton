@@ -4,11 +4,18 @@
 
 .intro__inner {
   display: grid;
-  grid-template-columns: auto minmax(110px, auto);
+  grid-template-columns: auto 110px;
   grid-template-rows: minmax(157px, auto) auto;
   grid-row-gap: 30px;
   padding-top: 20px;
   padding-bottom: 30px;
+
+  @media (min-width: $medium-min-width) {
+    grid-template-areas:
+      "h i"
+      "d i";
+    grid-row-gap: 0;
+  }
 }
 
 .intro__image-wrapper {
@@ -19,7 +26,11 @@
   grid-area: 1 / 2 / 2 / 3;
   display: block;
   width: 110px;
-  height: 157px;
+  height: auto;
+
+  @media (min-width: $medium-min-width) {
+    grid-area: i;
+  }
 }
 
 .intro__heading {
@@ -28,10 +39,18 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 10px;
+
+  @media (min-width: $medium-min-width) {
+    grid-area: h;
+  }
 }
 
 .intro__description {
   grid-area: 2 / 1 / 3 / 3;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (min-width: $medium-min-width) {
+    grid-area: d;
+  }
 }
