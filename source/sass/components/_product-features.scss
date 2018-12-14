@@ -1,3 +1,37 @@
+.product-features {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+.product-features__heading {
+  @include font(700, 20px, 30px);
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 .product-features__list {
+  @include list;
+}
+
+.product-features__item {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.product-features__caption {
+  @include font(500, 28px, 33px);
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: $blue;
+}
+
+.product-features__paragraph {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.product-features__inner-list {
   @include list;
 }

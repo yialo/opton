@@ -3,10 +3,13 @@
   @include font(400, 14px, 16px);
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -5px;
   color: $gray-breadcrumbs;
 }
 
 .breadcrumbs__item {
+  margin-bottom: 5px;
+
   &:not(:last-child) {
     margin-right: 10px;
 

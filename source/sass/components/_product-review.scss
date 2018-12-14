@@ -1,3 +1,9 @@
+.product-review__image-wrapper {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.05);
+}
+
 .product-review__image {
   display: block;
 }
@@ -9,6 +15,11 @@
   text-transform: uppercase;
 }
 
+.product-review__download {
+  margin-bottom: 20px;
+}
+
 .product-review__deteils {
   margin-top: 0;
+  margin-bottom: 20px;
 }

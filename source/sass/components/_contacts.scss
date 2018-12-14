@@ -23,6 +23,7 @@
 .contacts__text {
   @include font(400, 18px, 21px);
   display: block;
+  color: $dark-gray;
 }
 
 .contacts__form-list {

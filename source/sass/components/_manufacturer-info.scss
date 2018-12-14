@@ -1,0 +1,22 @@
+.manufacturer-info {
+  display: flex;
+}
+
+.manufacturer-info__image {
+  display: block;
+  width: 109px;
+  height: 109px;
+  margin-right: 20px;
+}
+
+.manufacturer-info__legend {
+  @include font(500, 18px, 22px);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.manufacturer-info__name {
+  @include font(300, 16px, 19px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
