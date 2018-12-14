@@ -1,18 +1,19 @@
+$pagesWithHeaderMarginBottom: (
+  "production",
+  "contacts",
+  "software",
+  "product",
+);
+
 .page__header {
-  .page--production & {
-    margin-bottom: 20px;
-  }
+  @each $value in $pagesWithHeaderMarginBottom {
+    .page--#{$value} & {
+      margin-bottom: 40px;
 
-  .page--contacts & {
-    margin-bottom: 30px;
-  }
-
-  .page--software & {
-    margin-bottom: 20px;
-  }
-
-  .page--product & {
-    margin-bottom: 20px;
+      @media (min-width: $medium-min-width) {
+        margin-bottom: 60px;
+      }
+    }
   }
 }
 

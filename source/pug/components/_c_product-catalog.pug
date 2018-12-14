@@ -1,5 +1,5 @@
 mixin product-catalog(productCatalog_options)
- section.product-catalog
+ section.product-catalog(class=`product-catalog--${productCatalog_options.modifier}`)
   .product-catalog__inner.aligner
     case productCatalog_options.modifier
       when 'production'
@@ -9,7 +9,7 @@ mixin product-catalog(productCatalog_options)
             li.product-catalog__item
               +product-card({
                 componentModifier: productCatalog_options.modifier,
-                itemNumber: production_itemNumber,
+                itemNumber: productCatalogItem_number,
                 imageLegend: 'Продукция, изображение',
                 captionStack: productionProductCardCaptions
               })
@@ -22,7 +22,7 @@ mixin product-catalog(productCatalog_options)
             li.product-catalog__item
               +product-card({
                 componentModifier: productCatalog_options.modifier,
-                itemNumber: software_itemNumber,
+                itemNumber: productCatalogItem_number,
                 captionStack: softwareProductCardCaptions,
                 labelStack: softwareProductCardLabels,
                 descriptionStack: softwareProductCardDescriptions
