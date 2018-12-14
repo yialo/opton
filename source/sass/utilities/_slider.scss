@@ -21,8 +21,12 @@
 }
 
 .slider__controls-wrapper {
+  @include margin-hor;
   display: flex;
   justify-content: center;
+  width: $small-min-width;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .slider__control-list {
@@ -33,14 +37,14 @@
 
 .slider__control-item {
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 30px;
   }
 }
 
 .slider__control-button {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   padding: 0;
   background-color: transparent;
   border: 1px solid white;

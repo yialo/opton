@@ -1,3 +1,7 @@
+.promo {
+  --slider-padding-bottom: 50px;
+}
+
 .promo__list {
   @include list;
   display: flex;
@@ -7,37 +11,43 @@
 .promo__item {
   display: flex;
   width: calc(100% / 3);
+  height: calc(281px - var(--slider-padding-bottom));
+  padding-bottom: var(--slider-padding-bottom);
   background-color: #343434;
   background-image: url("../img/promo__item--small.jpg");
   background-repeat: no-repeat;
   background-position: top;
+
+  @media (min-width: $medium-min-width) {
+    background-image: url("../img/promo__item--medium.jpg");
+  }
 }
 
 .promo__inner {
-  @include margin-hor;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
   padding-top: 20px;
-  padding-bottom: 70px;
   color: white;
 }
 
 .promo__title {
   @include font(900, 32px, 36px);
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
-  @media (min-width: $large-min-width) {
+  @media (min-width: $medium-min-width) {
     @include font(900, 64px, 75px);
   }
 }
 
 .promo__subtitle {
   @include font(500, 24px, 28px);
-  margin-top: auto;
+  margin-top: 0;
   margin-bottom: 0;
 
-  @media (min-width: $large-min-width) {
+  @media (min-width: $medium-min-width) {
     @include font(500, 28px, 33px);
   }
 }

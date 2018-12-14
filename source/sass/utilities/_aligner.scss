@@ -8,4 +8,8 @@
 
   outline: 1px solid red;
   outline-offset: -1px;
+
+  @media (min-width: $medium-min-width) {
+    width: $medium-min-width;
+  }
 }
