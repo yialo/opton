@@ -4,27 +4,27 @@ const modalOpenButton = pageWithModal.querySelector('.modal__open-button');
 const modalCloseButton = pageWithModal.querySelector('.modal__close-button');
 
 modalOpenButton.addEventListener('click', function (evt) {
-  if (!pageWithModal.classList.contains('is-visible')) {
+  if (!pageWithModal.classList.contains('is-modal-visible')) {
     evt.preventDefault();
-    pageWithModal.classList.add('is-visible');
+    pageWithModal.classList.add('is-modal-visible');
   }
 });
 
 modalCloseButton.addEventListener('click' , function (evt) {
-  if (pageWithModal.classList.contains('is-visible')) {
-    pageWithModal.classList.remove('is-visible');
+  if (pageWithModal.classList.contains('is-modal-visible')) {
+    pageWithModal.classList.remove('is-modal-visible');
   }
 });
 
 modalOverlay.addEventListener('click', function () {
-  if (pageWithModal.classList.contains('is-visible')) {
-    pageWithModal.classList.remove('is-visible');
+  if (pageWithModal.classList.contains('is-modal-visible')) {
+    pageWithModal.classList.remove('is-modal-visible');
   }
 });
 
 window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27 && pageWithModal.classList.contains('is-visible')) {
+  if (evt.keyCode === 27 && pageWithModal.classList.contains('is-modal-visible')) {
     evt.preventDefault();
-    pageWithModal.classList.remove('is-visible');
+    pageWithModal.classList.remove('is-modal-visible');
   }
 });

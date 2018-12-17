@@ -7,7 +7,7 @@
   padding-left: 20px;
   padding-right: 20px;
 
-  .is-visible & {
+  .is-menu-visible & {
     z-index: 1;
   }
 }
@@ -75,7 +75,7 @@
     transition: all 0.1s;
   }
 
-  .is-visible & {
+  .is-menu-visible & {
     height: 40px;
     background-size: 0 2px;
 
@@ -99,7 +99,7 @@
   &--closed {
     display: inline;
 
-    .is-visible & {
+    .is-menu-visible & {
       display: none;
     }
   }
@@ -107,7 +107,7 @@
   &--opened {
     display: none;
 
-    .is-visible & {
+    .is-menu-visible & {
       display: inline;
     }
   }
@@ -121,7 +121,7 @@
   width: calc(100% - 80px);
   overflow: hidden;
 
-  .is-visible & {
+  .is-menu-visible & {
     z-index: 0;
   }
 
@@ -136,7 +136,7 @@
 .page-header__navigation-inner {
   transform: translateY(-100%);
 
-  .is-visible & {
+  .is-menu-visible & {
     transform: translateY(0);
   }
 }

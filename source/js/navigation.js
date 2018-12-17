@@ -4,12 +4,12 @@ const pageHeaderButtonTextClosed = pageHeader.querySelector('.page-header__butto
 const pageHeaderButtonTextOpened = pageHeader.querySelector('.page-header__button-text--opened');
 
 pageHeaderButton.addEventListener('click', function () {
-  pageHeader.classList.toggle('is-visible');
+  pageHeader.classList.toggle('is-menu-visible');
 });
 
 window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27 && pageHeader.classList.contains('is-visible')) {
+  if (evt.keyCode === 27 && pageHeader.classList.contains('is-menu-visible')) {
     evt.preventDefault();
-    pageHeader.classList.toggle('is-visible');
+    pageHeader.classList.toggle('is-menu-visible');
   }
 });
