@@ -1,5 +1,14 @@
 .brand-card__image {
   margin-bottom: 20px;
+
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.brand-card__text {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .brand-card__title {
@@ -11,7 +20,6 @@
 .brand-card__list {
   @include list;
   @include font(400, 16px, 23px);
-  padding-left: 10px;
   color: $dark-gray;
 }
 
