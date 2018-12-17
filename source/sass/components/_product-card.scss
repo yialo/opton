@@ -1,5 +1,12 @@
+.product-card {
+  display: flex;
+  width: 100%;
+}
+
 .product-card__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
   padding-top: 16px;
   border-radius: 8px;
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.05);
@@ -22,15 +29,20 @@
 }
 
 .product-card__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   text-align: center;
 }
 
 .product-card__caption {
   @include font(500, 18px, 27px);
+  width: 300px;
+  overflow: hidden;
   margin-top: 0;
   margin-bottom: 32px;
-  padding-left: 10px;
-  padding-right: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   .product-card--software & {
     margin-bottom: 16px;
@@ -38,9 +50,6 @@
 
   @media (min-width: $medium-min-width) {
     @include margin-hor;
-    width: 260px;
-    padding-left: 0;
-    padding-right: 0;
     line-height: 21px;
   }
 }
@@ -48,8 +57,10 @@
 .product-card__tip {
   @include font(500, 16px, 19px);
   display: block;
+  margin-top: auto;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
   text-transform: uppercase;
   color: $blue;
   border-bottom-left-radius: 8px;
@@ -87,6 +98,6 @@
   @include font(400, 16px, 23px);
   margin-top: 0;
   margin-bottom: 32px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
