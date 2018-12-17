@@ -6,19 +6,28 @@ mixin contacts(contacts_options)
         'heading'
       ])= contacts_options.heading
       ul.contacts__list
-        li.contacts__item.contacts__item--address
-          h3.contacts__caption Адрес
-          span.contacts__text 115088, Москва, ул. Угрешская, д.2, стр.53
-        li.contacts__item.contacts__item--phone
-          h3.contacts__caption Телефон
-          span.contacts__text
-            a.contacts__link(href='tel:+74956645520')
-              | +7 (495) 664-55-20
-        li.contacts__item.contacts__item--email
-          h3.contacts__caption E-mail
-          span.contacts__text
-            a.contacts__link(href='mailto:info@opton.ru')
-              | info@opton.ru
+        mixin contacts__item(contactsList_options)
+          li.contacts__item(class=`contacts__item--${contactsList_options.modifier}`)
+            h3.contacts__caption.heading.heading--contacts= contactsList_options.caption
+            span.contacts__text
+              block
+        +contacts__item({
+          modifier: 'address',
+          caption: 'Адрес'
+        })
+          | 115088, Москва, ул. Угрешская, д.2, стр.53
+        +contacts__item({
+          modifier: 'phone',
+          caption: 'Телефон'
+        })
+          a.contacts__link(href='tel:+74956645520')
+            | +7 (495) 664-55-20
+        +contacts__item({
+          modifier: 'email',
+          caption: 'E-mail'
+        })
+          a.contacts__link(href='mailto:info@opton.ru')
+            | info@opton.ru
       form.contacts__form(
         name='question'
         action='https://echo.htmlacademy.ru'

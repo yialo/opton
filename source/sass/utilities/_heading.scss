@@ -6,9 +6,19 @@
     font-weight: 700;
   }
 
+  &--contacts {
+    @include font(700, 28px, 42px);
+    text-transform: none;
+  }
+
   @media (min-width: $medium-min-width) {
     font-size: 48px;
     line-height: 56px;
+
+    &--contacts {
+      font-size: 32px;
+      line-height: 38px;
+    }
   }
 }
 
