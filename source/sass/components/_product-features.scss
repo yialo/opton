@@ -2,12 +2,23 @@
   &:not(:last-child) {
     margin-bottom: 60px;
   }
+
+  @media (min-width: $medium-min-width) {
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+  }
 }
 
 .product-features__heading {
   @include font(700, 20px, 30px);
   margin-top: 0;
   margin-bottom: 30px;
+
+  @media (min-width: $medium-min-width) {
+    font-size: 32px;
+    line-height: 36px;
+  }
 }
 
 .product-features__list {

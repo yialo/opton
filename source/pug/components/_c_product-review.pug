@@ -16,4 +16,6 @@ mixin product-review(productRevies_heading)
       .product-review__manufacturer-info
         +manufacturer-info()
       .product-review__button
-        +button('request')
+        +button({
+          typeModifier: 'request'
+        })

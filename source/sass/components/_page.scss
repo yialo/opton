@@ -30,4 +30,10 @@ $pagesWithHeaderMarginBottom: (
   .page--product & {
     margin-bottom: 40px;
   }
+
+  @media (min-width: $medium-min-width) {
+    .page--product & {
+      margin-bottom: 80px;
+    }
+  }
 }

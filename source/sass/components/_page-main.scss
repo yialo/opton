@@ -4,4 +4,8 @@
 
 .page-main__product-review {
   margin-bottom: 60px;
+
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 80px;
+  }
 }
