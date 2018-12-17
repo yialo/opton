@@ -1,0 +1,33 @@
+mixin service-catalog(serviceCatalog_options)
+  .service-catalog(class=`service-catalog--${serviceCatalog_options.modifier}`)
+    .service-catalog__inner.aligner
+      case serviceCatalog_options.modifier
+        when 'areas'
+          p.service-catalog__description.paragraph
+            | CONTURA — широкая платформа от ZEISS для гибкого, надежного и бескомпромиссного обеспечения качества. Последнее поколение еще точнее и предлагает большой пакет оптических датчиков в верхней части большего диапазона измерений. Выдающаяся технология сканирования, справочное программное обеспечение ZEISS CALYPSO и полностью настроенная общая концепция позволяют ZEISS CONTURA закрепить свое место в качестве стандарта в своем классе.
+          ul.service-catalog__list
+            mixin service-catalog__item(serviceCatalogItem_number)
+              li.service-catalog__item
+                +service-card({
+                  componentModifier: 'areas',
+                  itemNumber: serviceCatalogItem_number,
+                  captionStack: areasServiceCardCaptions
+                })
+            each value, index in areasServiceCardCaptions
+              +service-catalog__item(index + 1)
+        when 'services'
+        default
+          h1(class=[
+            'service-catalog__heading',
+            'heading'
+          ])= serviceCatalog_options.heading
+          ul.service-catalog__list
+            mixin service-catalog__item(serviceCatalogItem_number)
+              li.service-catalog__item
+                +service-card({
+                  componentModifier: 'services',
+                  itemNumber: serviceCatalogItem_number,
+                  captionStack: servicesServiceCardCaptions
+                })
+            each value, index in servicesServiceCardCaptions
+              +service-catalog__item(index + 1)

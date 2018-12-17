@@ -1,4 +1,4 @@
-.areas__inner {
+.service-catalog__inner {
   padding-top: 40px;
   padding-bottom: 40px;
 
@@ -8,7 +8,12 @@
   }
 }
 
-.areas__description {
+.service-catalog__heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.service-catalog__description {
   @include font(400, 18px, 21px);
   margin-top: 0;
   margin-bottom: 30px;
@@ -22,7 +27,7 @@
   }
 }
 
-.areas__list {
+.service-catalog__list {
   @include list;
   display: grid;
   grid-row-gap: 40px;
@@ -36,7 +41,7 @@
   }
 }
 
-.areas__item {
+.service-catalog__item {
   @media (min-width: $medium-min-width) {
     margin-bottom: 30px;
 
@@ -44,8 +49,12 @@
       width: 230px;
     }
 
-    &:nth-child(n+4) {
+    &:nth-child(n+4):nth-child(-n+7) {
       width: 165px;
+    }
+
+    &:nth-child(n+8) {
+      width: 230px;
     }
   }
 }

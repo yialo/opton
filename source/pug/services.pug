@@ -10,4 +10,7 @@ block variables
 
 block page-main
   .page-main__services
-    +services(page.heading)
+    +service-catalog({
+      modifier: 'services',
+      heading: page.heading
+    })
