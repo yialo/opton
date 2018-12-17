@@ -3,11 +3,24 @@
   background-image: url("../img/banner--small.jpg");
   background-repeat: no-repeat;
   background-position: top;
+
+  @media (min-width: $medium-min-width) {
+    background-image: url("../img/banner--medium.jpg");
+  }
+
+  @media (min-width: $large-min-width) {
+    background-image: url("../img/banner--large.jpg");
+  }
 }
 
 .banner__inner {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media (min-width: $medium-min-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .banner__heading {
@@ -16,4 +29,9 @@
   margin-bottom: 0;
   text-transform: uppercase;
   color: white;
+
+  @media (min-width: $medium-min-width) {
+    font-size: 54px;
+    line-height: 64px;
+  }
 }
