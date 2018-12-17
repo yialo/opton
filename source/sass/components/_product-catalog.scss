@@ -1,13 +1,15 @@
 .product-catalog__inner {
+  padding-bottom: 30px;
+
   .product-catalog--equipment & {
     padding-top: 40px;
-    padding-bottom: 30px;
   }
 
   @media (min-width: $medium-min-width) {
+    padding-bottom: 80px;
+
     .product-catalog--equipment & {
       padding-top: 80px;
-      padding-bottom: 80px;
     }
   }
 }

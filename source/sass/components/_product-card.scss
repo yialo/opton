@@ -15,6 +15,10 @@
   width: 181px;
   height: 194px;
   margin-bottom: 8px;
+
+  .product-card--production & {
+    margin-bottom: 40px;
+  }
 }
 
 .product-card__text {
