@@ -1,7 +1,11 @@
 mixin training(training_options)
   .training
     .training__inner.aligner
-      picture
+      picture.training__image-wrapper
+        source(
+          media=viewportLargeMinWidth
+          srcset='img/training__image--large.jpg'
+        )
         source(
           media=viewportMediumMinWidth
           srcset='img/training__image--medium.jpg'

@@ -3,23 +3,53 @@
   grid-template-rows: repeat(3, auto);
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media (min-width: $medium-min-width) {
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 40px;
+  }
+}
+
+.training__image-wrapper {
+  margin-bottom: 30px;
+
+  @media (min-width: $medium-min-width) {
+    grid-area: 1 / 2 / 3 / 3;
+    margin-bottom: 0;
+  }
 }
 
 .training__image {
   display: block;
-  width: 280px;
-  height: auto;
-  margin-bottom: 30px;
 }
 
 .training__heading {
   grid-row: 1 / 2;
   margin-top: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $medium-min-width) {
+    grid-area: 1 / 1 / 2 / 2;
+    margin-bottom: 0;
+  }
 }
 
 .training__description {
   margin-top: 0;
   margin-bottom: 30px;
   color: $dark-gray;
+
+  @media (min-width: $medium-min-width) {
+    grid-area: 2 / 1 / 4 / 2;
+    align-self: end;
+    margin-bottom: 0;
+  }
+}
+
+.training__button {
+  @media (min-width: $medium-min-width) {
+    grid-area: 3 / 2 / 4 / 3;
+  }
 }
