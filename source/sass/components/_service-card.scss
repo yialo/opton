@@ -5,28 +5,36 @@
 
 .service-card__image {
   display: block;
-  width: 280px;
-  min-height: 100px;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .service-card__text {
   position: absolute;
   bottom: 0;
   left: 0;
+  display: flex;
+  align-items: center;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  min-height: 106px;
+  max-height: 333px;
+  overflow: hidden;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 0 0 16px 16px;
-  transition-property: padding;
+  border-radius: 0 0 8px 8px;
+  transition-property: min-height;
   transition-duration: 0.2s;
 
   .service-card__link:hover & {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    min-height: 126px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    min-height: 70px;
+    padding: 10px;
+
+    .service-card__link:hover & {
+      min-height: 90px;
+    }
   }
 }
 
@@ -35,4 +43,9 @@
   margin-top: 0;
   margin-bottom: 0;
   color: white;
+
+  @media (min-width: $medium-min-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

@@ -1,16 +1,51 @@
 .areas__inner {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media (min-width: $medium-min-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .areas__description {
   @include font(400, 18px, 21px);
   margin-top: 0;
   margin-bottom: 30px;
+
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .areas__list {
   @include list;
   display: grid;
-  grid-row-gap: 20px;
+  grid-row-gap: 40px;
+
+  @media (min-width: $medium-min-width) {
+    grid-row-gap: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -30px;
+  }
+}
+
+.areas__item {
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 30px;
+
+    &:nth-child(-n+3) {
+      width: 230px;
+    }
+
+    &:nth-child(n+4) {
+      width: 165px;
+    }
+  }
 }
