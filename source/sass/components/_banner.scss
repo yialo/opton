@@ -21,17 +21,15 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
+  @media (min-width: $large-min-width) {
+    padding: 80px 120px;
+  }
 }
 
 .banner__heading {
-  @include font(900, 32px, 36px);
   margin-top: 0;
   margin-bottom: 0;
   text-transform: uppercase;
   color: white;
-
-  @media (min-width: $medium-min-width) {
-    font-size: 54px;
-    line-height: 64px;
-  }
 }

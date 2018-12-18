@@ -36,6 +36,15 @@
       min-height: 90px;
     }
   }
+
+  @media (min-width: $large-min-width) {
+    min-height: 113px;
+    padding: 40px 32px;
+
+    .service-card__link:hover & {
+      min-height: 173px;
+    }
+  }
 }
 
 .service-card__caption {
@@ -47,5 +56,10 @@
   @media (min-width: $medium-min-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: $large-min-width) {
+    font-size: 28px;
+    line-height: 33px;
   }
 }

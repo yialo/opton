@@ -3,6 +3,10 @@ mixin service-card(serviceCard_options)
     a.service-card__link(href='#')
       picture
         source(
+          media=viewportLargeMinWidth
+          srcset=`img/${serviceCard_options.componentModifier}-service-card__image--${serviceCard_options.itemNumber}-large.jpg`
+        )
+        source(
           media=viewportMediumMinWidth
           srcset=`img/${serviceCard_options.componentModifier}-service-card__image--${serviceCard_options.itemNumber}-medium.jpg`
         )

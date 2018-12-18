@@ -6,6 +6,11 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
+  @media (min-width: $large-min-width) {
+    padding-top: 80px;
+    padding-bottom: 128px;
+  }
 }
 
 .service-catalog__heading {
@@ -24,6 +29,8 @@
 
   @media (min-width: $large-min-width) {
     margin-bottom: 80px;
+    padding-left: 215px;
+    padding-right: 215px;
   }
 }
 
@@ -38,6 +45,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: -30px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-top: -40px;
   }
 }
 
@@ -55,6 +66,22 @@
 
     &:nth-child(n+8) {
       width: 230px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-top: 40px;
+
+    &:nth-child(-n+3) {
+      width: 410px;
+    }
+
+    &:nth-child(n+4):nth-child(-n+7) {
+      width: 302px;
+    }
+
+    &:nth-child(n+8) {
+      width: 410px;
     }
   }
 }
