@@ -33,17 +33,17 @@
   grid-row-gap: 40px;
 
   @media (min-width: $medium-min-width) {
-    grid-row-gap: auto;
+    grid-row-gap: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: -30px;
+    margin-top: -30px;
   }
 }
 
 .service-catalog__item {
   @media (min-width: $medium-min-width) {
-    margin-bottom: 30px;
+    margin-top: 30px;
 
     &:nth-child(-n+3) {
       width: 230px;

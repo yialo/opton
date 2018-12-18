@@ -23,11 +23,25 @@
 
 .product-features__list {
   @include list;
+
+  @media (min-width: $medium-min-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    grid-gap: 48px 24px;
+  }
 }
 
 .product-features__item {
   &:not(:last-child) {
     margin-bottom: 40px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -45,4 +59,24 @@
 
 .product-features__inner-list {
   @include list;
+}
+
+.product-features__inner-item {
+  position: relative;
+  padding-left: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: $blue;
+    border-radius: 50%;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
