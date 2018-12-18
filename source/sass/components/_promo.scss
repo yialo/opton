@@ -28,6 +28,7 @@
 
   @media (min-width: $large-min-width) {
     height: 525px;
+    background-color: transparent;
     background-image: url("../img/promo__item--large.jpg");
   }
 }

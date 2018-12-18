@@ -9,6 +9,7 @@
   }
 
   @media (min-width: $large-min-width) {
+    background-color: transparent;
     background-image: url("../img/banner--large.jpg");
   }
 }
