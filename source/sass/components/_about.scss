@@ -5,6 +5,10 @@
   @media (min-width: $medium-min-width) {
     padding-bottom: 60px;
   }
+
+  @media (min-width: $large-min-width) {
+    padding: 56px 240px 128px;
+  }
 }
 
 .about__heading {
@@ -12,7 +16,7 @@
   margin-bottom: 20px;
 
   @media (min-width: $medium-min-width) {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 }
 
@@ -22,6 +26,6 @@
   color: $dark-gray;
 
   @media (min-width: $medium-min-width) {
-    margin-top: 30px;
+    margin-top: 24px;
   }
 }
