@@ -8,7 +8,7 @@ mixin contacts(contacts_options)
       ul.contacts__list
         mixin contacts__item(contactsList_options)
           li.contacts__item(class=`contacts__item--${contactsList_options.modifier}`)
-            h3.contacts__caption.heading.heading--contacts= contactsList_options.caption
+            h3.contacts__caption= contactsList_options.caption
             span.contacts__text
               block
         +contacts__item({

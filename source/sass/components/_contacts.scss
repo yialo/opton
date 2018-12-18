@@ -1,3 +1,10 @@
+.contacts__inner {
+  @media (min-width: $large-min-width) {
+    padding-left: 234px;
+    padding-right: 234px;
+  }
+}
+
 .contacts__heading {
   margin-top: 0;
   margin-bottom: 25px;
@@ -36,11 +43,14 @@
 }
 
 .contacts__caption {
+  @include font(700, 28px, 42px);
   margin-top: 0;
   margin-bottom: 10px;
 
   @media (min-width: $medium-min-width) {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 
@@ -63,6 +73,7 @@
   @media (min-width: $medium-min-width) {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 16px 24px;
+    margin-bottom: 40px;
   }
 }
 
@@ -76,6 +87,6 @@
 
 .contacts__button {
   @media (min-width: $medium-min-width) {
-    width: calc(50% - 12px);
+    max-width: 210px;
   }
 }

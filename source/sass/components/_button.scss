@@ -3,22 +3,11 @@
   display: block;
   min-width: auto;
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 40px;
   text-align: center;
   text-transform: uppercase;
   color: white;
   background-color: $blue;
   border-style: none;
   border-radius: 8px;
-
-  &--request {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  &--send {
-    padding-left: 64px;
-    padding-right: 64px;
-  }
 }

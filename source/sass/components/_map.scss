@@ -1,9 +1,19 @@
+.map__inner {
+  @media (min-width: $large-min-width) {
+    padding-left: 234px;
+    padding-right: 234px;
+  }
+}
+
 .map__heading {
+  @include font(700, 28px, 42px);
   margin-top: 0;
   margin-bottom: 30px;
 
   @media (min-width: $medium-min-width) {
     margin-bottom: 40px;
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 
@@ -13,5 +23,9 @@
 
   @media (min-width: $medium-min-width) {
     height: 350px;
+  }
+
+  @media (min-width: $large-min-width) {
+    height: 478px;
   }
 }
