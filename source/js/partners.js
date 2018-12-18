@@ -4,3 +4,5 @@ $('.partners__list').slick({
   arrows: false,
   variableWidth: true
 });
+
+//TODO: add breakpoint and chande slideToScroll property for md and lg viewports

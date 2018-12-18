@@ -12,6 +12,14 @@
       padding-top: 80px;
     }
   }
+
+  @media (min-width: $large-min-width) {
+    padding-bottom: 128px;
+
+    .product-catalog--equipment & {
+      padding-top: 128px;
+    }
+  }
 }
 
 .product-catalog__heading {
@@ -20,6 +28,10 @@
 
   @media (min-width: $medium-min-width) {
     margin-bottom: 60px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 90px;
   }
 }
 
@@ -30,8 +42,13 @@
 
   @media (min-width: $medium-min-width) {
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 40px;
+    grid-gap: 24px 40px;
+  }
+
+  @media (min-width: $large-min-width) {
+    grid-template-columns: repeat(4, 302px);
     justify-content: space-around;
+    grid-column-gap: 0;
   }
 }
 
