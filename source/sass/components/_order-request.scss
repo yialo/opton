@@ -3,6 +3,11 @@
   z-index: 0;
   width: 100%;
   padding: 10px;
+
+  @media (min-width: $medium-min-width) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .order-request__overlay {
@@ -18,11 +23,20 @@
 .order-request__container {
   @include margin-hor;
   position: relative;
-  max-width: 440px;
   min-width: calc(#{$small-min-width} - 20px);
+  max-width: calc(#{$small-max-width} * 0.6);
   padding: 20px;
   background-color: white;
   border-radius: 8px;
+
+  @media (min-width: $medium-min-width) {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: calc(#{$medium-min-width} - 40px);
+    max-width: calc(#{$medium-max-width} * 0.7);
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .order-request__close-button {
@@ -40,36 +54,93 @@
   border-style: none;
 }
 
+.order-request__image-wrapper {
+  margin-bottom: 20px;
+
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+}
+
 .order-request__image {
   display: block;
-  margin-bottom: 20px;
 }
 
 .order-request__tip {
   @include font(400, 16px, 20px);
   margin-top: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $medium-min-width) {
+    flex-grow: 1;
+    width: 200px;
+    margin-bottom: 0;
+    padding-right: 60px;
+  }
 }
 
 .order-request__form {
   display: grid;
   grid-row-gap: 10px;
+
+  @media (min-width: $medium-min-width) {
+    grid-template-rows: 1fr 16px 1fr 64px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 24px;
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+.order-request__form-item {
+  @media (min-width: $medium-min-width) {
+    &--fullname {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &--email {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    &--telephone {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+
+    &--company {
+      grid-area: 3 / 2 / 4 / 3;
+    }
+  }
 }
 
 .order-request__button-wrapper {
-  &:first-child {
+  &:nth-last-child(2) {
     margin-top: 10px;
   }
 
   &:last-child {
     display: none;
   }
+
+  @media (min-width: $medium-min-width) {
+    &:nth-last-child(2) {
+      grid-area: 5 / 1 / 6 / 2;
+      margin-top: 0;
+    }
+
+    &:last-child {
+      grid-area: 5 / 2 / 6 / 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .order-request__cancel-button {
   @media (min-width: $medium-min-width) {
     @include font(300, 16px, 19px);
-    display: inline;
+    display: block;
     color: #999999;
     background-color: transparent;
     border-style: none;

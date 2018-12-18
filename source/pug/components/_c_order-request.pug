@@ -4,7 +4,7 @@ mixin order-request()
     .order-request__container
       h2.visually-hidden Форма заявки
       button.order-request__close-button.modal__close-button
-      picture
+      picture.order-request__image-wrapper
         source(
           media=viewportMediumMinWidth
           srcset='img/order-request__image--medium.jpg'
@@ -25,21 +25,24 @@ mixin order-request()
             tag: 'input',
             type: 'text',
             id: 'fullname',
-            text: 'Имя'
+            text: 'Имя',
+            isRequired: true
           })
         .order-request__form-item.order-request__form-item--email
           +form-item({
             tag: 'input',
             type: 'email',
             id: 'email',
-            text: 'Email'
+            text: 'Email',
+            isRequired: true
           })
         .order-request__form-item.order-request__form-item--telephone
           +form-item({
             tag: 'input',
             type: 'tel',
             id: 'telephone',
-            text: 'Номер телефона'
+            text: 'Номер телефона',
+            isRequired: true
           })
         .order-request__form-item.order-request__form-item--company
           +form-item({
@@ -56,4 +59,4 @@ mixin order-request()
           button.order-request__cancel-button.modal__cancel-button(
             type='button'
           )
-            span.button-fix Отмена
+            span.order-request__button-inner.button-fix Отмена
