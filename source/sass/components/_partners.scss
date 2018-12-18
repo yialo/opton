@@ -1,6 +1,16 @@
 .partners__inner {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @media (min-width: $medium-min-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $large-min-width) {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
 }
 
 .partners__heading {
@@ -8,6 +18,10 @@
   margin-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 75px;
+  }
 }
 
 .partners__item {
