@@ -1,5 +1,9 @@
 .promo {
   --slider-padding-bottom: 50px;
+
+  @media (min-width: $large-min-width) {
+    --slider-padding-bottom: 0;
+  }
 }
 
 .promo__list {
@@ -21,6 +25,11 @@
   @media (min-width: $medium-min-width) {
     background-image: url("../img/promo__item--medium.jpg");
   }
+
+  @media (min-width: $large-min-width) {
+    height: 525px;
+    background-image: url("../img/promo__item--large.jpg");
+  }
 }
 
 .promo__inner {
@@ -30,6 +39,13 @@
   overflow: hidden;
   padding-top: 20px;
   color: white;
+
+  @media (min-width: $large-min-width) {
+    justify-content: flex-start;
+    padding-top: 128px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
 }
 
 .promo__title {
@@ -40,6 +56,10 @@
   @media (min-width: $medium-min-width) {
     @include font(900, 64px, 75px);
   }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 0;
+  }
 }
 
 .promo__subtitle {
@@ -49,5 +69,9 @@
 
   @media (min-width: $medium-min-width) {
     @include font(500, 28px, 33px);
+  }
+
+  @media (min-width: $large-min-width) {
+    width: 360px;
   }
 }
