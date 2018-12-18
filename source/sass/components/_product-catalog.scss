@@ -1,0 +1,59 @@
+.product-catalog__inner {
+  padding-bottom: 40px;
+
+  .product-catalog--equipment & {
+    padding-top: 40px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    padding-bottom: 80px;
+
+    .product-catalog--equipment & {
+      padding-top: 80px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    padding-bottom: 128px;
+
+    .product-catalog--equipment & {
+      padding-top: 128px;
+    }
+  }
+}
+
+.product-catalog__heading {
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 90px;
+  }
+}
+
+.product-catalog__list {
+  @include list;
+  display: grid;
+  grid-row-gap: 40px;
+
+  @media (min-width: $medium-min-width) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px 40px;
+  }
+
+  @media (min-width: $large-min-width) {
+    grid-template-columns: repeat(4, 302px);
+    justify-content: space-around;
+    grid-column-gap: 0;
+  }
+}
+
+.product-catalog__item {
+  @media (min-width: $medium-min-width) {
+    display: flex;
+  }
+}

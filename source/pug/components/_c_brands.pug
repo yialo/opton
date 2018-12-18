@@ -1,0 +1,9 @@
+mixin brands()
+  .brands
+    .brands__inner.aligner
+      ul.brands__list
+        mixin brands__item(brandsItem_number)
+          li.brands__item
+            +brand-card(brandsItem_number)
+        each value, index in brandCardLists
+          +brands__item(index)

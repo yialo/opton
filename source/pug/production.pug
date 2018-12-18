@@ -2,8 +2,15 @@ extends common/_t_default.pug
 
 block variables
   -
-    var page = {
+    const page = {
       id: 'production',
       title: 'Продукция',
-      heading: 'Продукция'
+      heading: 'Zeiss'
     };
+
+block page-main
+  .page-main__production
+    +product-catalog({
+      modifier: 'production',
+      heading: page.title
+    })

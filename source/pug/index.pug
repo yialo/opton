@@ -2,7 +2,7 @@ extends common/_t_default.pug
 
 block variables
   -
-    var page = {
+    const page = {
       id: 'index',
       title: 'Главная',
       heading: `Сайт компании ${siteName}`
@@ -11,3 +11,18 @@ block variables
 block page-main
   .page-main__promo
     +promo()
+  .page-main__equipment
+    +product-catalog({
+      modifier: 'equipment',
+      heading: 'Оборудование'
+    })
+  .page-main__intro
+    +intro()
+  .page-main__partners
+    +partners()
+
+block custom-scripts
+  script(src='js/jquery-3.3.1.js')
+  script(src='js/slick.js')
+  script(src='js/promo.js')
+  script(src='js/partners.js')

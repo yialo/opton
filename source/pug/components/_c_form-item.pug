@@ -1,0 +1,21 @@
+mixin form-item(formItem_options)
+  - let requiredFlag = '';
+  if (formItem_options.isRequired === true)
+    - requiredFlag = {required: ''};
+  .form-item
+    label.visually-hidden(
+      for=formItem_options.id
+    )= formItem_options.text
+    case formItem_options.tag
+      when 'textarea'
+        textarea.form-item__field.form-item__field--message(
+          id=formItem_options.id
+          placeholder=formItem_options.text
+        )&attributes(requiredFlag)
+      default
+        input.form-item__field(
+          type=formItem_options.type
+          id=formItem_options.id
+          name=formItem_options.id
+          placeholder=formItem_options.text
+        )&attributes(requiredFlag)

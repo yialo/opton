@@ -1,0 +1,16 @@
+extends common/_t_default.pug
+
+block variables
+  -
+    const page = {
+      id: 'software',
+      title: 'Программное обеспечение',
+      heading: 'Zeiss'
+    };
+
+block page-main
+  .page-main__software
+    +product-catalog({
+      modifier: 'software',
+      heading: page.title
+    })

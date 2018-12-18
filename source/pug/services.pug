@@ -2,8 +2,15 @@ extends common/_t_default.pug
 
 block variables
   -
-    var page = {
+    const page = {
       id: 'services',
       title: 'Услуги',
       heading: 'Услуги'
     };
+
+block page-main
+  .page-main__services
+    +service-catalog({
+      modifier: 'services',
+      heading: page.heading
+    })

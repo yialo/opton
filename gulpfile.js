@@ -9,7 +9,7 @@ var
   gulp = require('gulp'),
   mincss = require('gulp-csso'),
   minimage = require('gulp-imagemin'),
-  minjs = require('gulp-uglify'),
+  minjs = require('gulp-terser'),
   mozjpeg = require('imagemin-mozjpeg'),
   notify = require('gulp-notify'),
   plumber = require('gulp-plumber'),
@@ -96,14 +96,6 @@ var minbitmap = function () {
     .pipe(gulp.dest('./source/img/'));
 }
 
-var cleanbitmap = function () {
-  return del('./soruce/img/*.{jpg,png}');
-}
-
-var cleansvg = function () {
-  return del('./soruce/img/*.svg');
-}
-
 var cleanbuild = function () {
   return del('./build/');
 }
@@ -170,14 +162,11 @@ var serve = function () {
 gulp.task('build', gulp.series(cleanbuild, copyfonts, copysvg, copybitmap, scripts, style, html));
 gulp.task('serve', serve);
 
-gulp.task('imagemin', gulp.series(gulp.parallel(cleansvg, cleanbitmap), gulp.parallel(minsvg, minbitmap)));
+gulp.task('imagemin', gulp.parallel(minsvg, minbitmap));
 gulp.task('imagecopy', gulp.parallel(copysvg, copybitmap));
-gulp.task('imagerenew', gulp.series(gulp.parallel(cleansvg, cleanbitmap), gulp.parallel(minsvg, minbitmap), gulp.parallel(copysvg, copybitmap)));
 
-gulp.task('svgmin', gulp.series(cleansvg, minsvg));
+gulp.task('svgmin', minsvg);
 gulp.task('svgcopy', copysvg);
-gulp.task('svgrenew', gulp.series(cleansvg, minsvg, copysvg));
 
-gulp.task('bitmapmin', gulp.series(cleanbitmap, minbitmap));
+gulp.task('bitmapmin', minbitmap);
 gulp.task('bitmapcopy', copybitmap);
-gulp.task('bitmaprenew', gulp.series(cleanbitmap, minbitmap, copybitmap));

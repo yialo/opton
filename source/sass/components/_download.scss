@@ -1,0 +1,17 @@
+.download {
+  display: flex;
+  padding-left: 40px;
+  text-transform: uppercase;
+  background-image: url("../img/download.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.download__string {
+  @include font(400, 16px, 19px);
+  display: block;
+  padding: 10px 23px;
+  border: 1px dashed #a1caf0;
+  border-left-style: none;
+}

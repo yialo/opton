@@ -1,0 +1,35 @@
+$social-icon-names: (facebook, twitter, instagram);
+
+.social {
+  @include list;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 32px;
+  }
+
+  @media (min-width: $large-min-width) {
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+  }
+}
+
+.social__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @each $value in $social-icon-names {
+    &--#{$value} {
+      background-image: url("../img/icon-#{$value}.svg");
+    }
+  }
+}

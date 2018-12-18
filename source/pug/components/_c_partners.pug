@@ -1,0 +1,17 @@
+mixin partners()
+  section.partners
+    .partners__inner
+      h2(class=[
+        'partners__heading',
+        'heading',
+        'heading--underlined',
+        'aligner'
+      ])
+        span.heading__string Партнёры
+      .partners__slider
+        div.partners__list
+          mixin partners__item(partnersItem_number)
+            div.partners__item
+              +brand-logo(partnersItem_number)
+          each value, index in brandCardLists
+            +partners__item(index)

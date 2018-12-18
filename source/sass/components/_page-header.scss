@@ -1,0 +1,229 @@
+.page-header__base {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @media (max-width: $medium-max-width) {
+    padding-top: 20px;
+
+    .is-menu-visible & {
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 37px;
+    padding-bottom: 28px;
+  }
+}
+
+.page-header__logo {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $gray-border;
+
+  @media (min-width: $medium-min-width) {
+    width: 100%;
+    padding-bottom: 25px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 24px;
+    padding-bottom: 34px;
+    padding-left: 0;
+  }
+}
+
+.page-header__menu-controls {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+
+  @media (min-width: $medium-min-width) {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+  }
+
+  @media (min-width: $large-min-width) {
+    display: none;
+  }
+}
+
+.page-header__button {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/page-header__button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 2px;
+  border-style: none;
+  transition: all 0.1s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    transform-origin: center;
+    transition: all 0.1s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    transition: all 0.1s;
+  }
+
+  .is-menu-visible & {
+    height: 40px;
+    background-size: 0 2px;
+
+    &::before {
+      top: calc(50%);
+      width: 100%;
+      height: 2px;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+      bottom: calc(50%);
+      width: 100%;
+      height: 2px;
+      transform: translateY(50%) rotate(-45deg);
+    }
+  }
+}
+
+.page-header__button-text {
+  &--closed {
+    display: inline;
+
+    .is-menu-visible & {
+      display: none;
+    }
+  }
+
+  &--opened {
+    display: none;
+
+    .is-menu-visible & {
+      display: inline;
+    }
+  }
+}
+
+.page-header__navigation {
+  @media (max-width: $medium-max-width) {
+    position: absolute;
+    top: 46px;
+    right: 0;
+    z-index: -1;
+    width: calc(100% - 80px);
+    overflow: hidden;
+
+    .is-menu-visible & {
+      z-index: 0;
+    }
+
+    @media (min-width: $medium-min-width) {
+      top: 70px;
+      left: 0;
+      right: auto;
+      width: 50%;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    width: 845px;
+  }
+}
+
+.page-header__navigation-inner {
+  @media (max-width: $medium-max-width) {
+    transform: translateY(-100%);
+
+    .is-menu-visible & {
+      transform: translateY(0);
+    }
+  }
+}
+
+.page-header__contact-list {
+  @include list;
+  @include font(500, 16px, 24px);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 220px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  @media (min-width: $medium-min-width) {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  @media (min-width: $large-min-width) {
+    justify-content: space-between;
+    align-content: stretch;
+    width: 290px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.page-header__contact {
+  width: 100%;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    width: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    text-align: left;
+  }
+}
+
+.page-header__breadcrumbs {
+  position: relative;
+  margin-top: 30px;
+
+  @media (min-width: $medium-min-width) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-top: 56px;
+  }
+}

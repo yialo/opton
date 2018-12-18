@@ -1,0 +1,16 @@
+.modal {
+  &.is-modal-visible {
+    overflow: hidden;
+    margin-right: 17px;
+  }
+}
+
+.modal__window {
+  display: none;
+
+  .is-modal-visible & {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}

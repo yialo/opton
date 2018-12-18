@@ -1,0 +1,55 @@
+$pagesWithHeaderMarginBottom: (
+  "production",
+  "contacts",
+  "software",
+  "product"
+);
+
+.page__header {
+  @each $value in $pagesWithHeaderMarginBottom {
+    .page--#{$value} & {
+      margin-bottom: 40px;
+
+      @media (min-width: $medium-min-width) {
+        margin-bottom: 56px;
+      }
+
+      @media (min-width: $large-min-width) {
+        margin-bottom: 56px;
+      }
+    }
+  }
+
+  .page--product & {
+    @media (min-width: $large-min-width) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.page__order-request {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  min-height: 100%;
+}
+
+.page__main {
+  .page--product & {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $medium-min-width) {
+    .page--product & {
+      margin-bottom: 80px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    .page--product & {
+      margin-bottom: 128px;
+    }
+  }
+}

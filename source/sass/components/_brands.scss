@@ -1,0 +1,32 @@
+.brands__inner {
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  @media (min-width: $medium-min-width) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $large-min-width) {
+    padding-top: 85px;
+    padding-bottom: 128px;
+  }
+}
+
+.brands__list {
+  @include list;
+  display: grid;
+  grid-row-gap: 40px;
+
+  @media (min-width: $medium-min-width) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    justify-content: space-around;
+  }
+
+  @media (min-width: $large-min-width) {
+    grid-template-columns: repeat(4, 302px);
+    justify-content: space-between;
+    grid-column-gap: 0;
+  }
+}

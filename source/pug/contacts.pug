@@ -2,8 +2,20 @@ extends common/_t_default.pug
 
 block variables
   -
-    var page = {
+    const page = {
       id: 'contacts',
       title: 'Контакты',
       heading: 'Контакты'
     };
+
+block page-main
+  .page-main__contacts
+    +contacts({
+      heading: page.heading
+    })
+  .page-main__map
+    +map()
+
+block custom-scripts
+  script(src='https://api-maps.yandex.ru/2.1/?apikey=ccb82d7c-0ab4-4b31-b2d1-f7884591ed14&lang=ru_RU' type='text/javascript')
+  script(src='js/map.js')

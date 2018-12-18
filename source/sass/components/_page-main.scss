@@ -1,0 +1,19 @@
+.page-main__contacts {
+  margin-bottom: 80px;
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 144px;
+  }
+}
+
+.page-main__product-review {
+  margin-bottom: 60px;
+
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 128px;
+  }
+}

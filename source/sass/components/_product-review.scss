@@ -1,0 +1,92 @@
+.product-review__inner {
+  display: grid;
+  grid-row-gap: 30px;
+
+  @media (min-width: $medium-min-width) {
+    grid-template-rows: repeat(3, auto 30px) auto;
+    grid-template-columns: auto auto;
+    grid-row-gap: 0;
+    grid-column-gap: 40px;
+  }
+
+  @media (min-width: $large-min-width) {
+    grid-template-rows: auto 18px auto 42px 1fr 5px auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 84px;
+    align-items: start;
+  }
+}
+
+.product-review__image-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.05);
+
+  @media (min-width: $medium-min-width) {
+    grid-area: 1 / 1 / 6 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: $large-min-width) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+}
+
+.product-review__image {
+  display: block;
+}
+
+.product-review__heading {
+  @include font(700, 28px, 42px);
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  @media (min-width: $medium-min-width) {
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $large-min-width) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+.product-review__download {
+  @media (min-width: $medium-min-width) {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+}
+
+.product-review__details {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (min-width: $medium-min-width) {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+}
+
+.product-review__manufacturer-info {
+  @media (min-width: $medium-min-width) {
+    grid-area: 7 / 1 / 8 / 2;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-top: 35px;
+  }
+}
+
+.product-review__button {
+  @media (min-width: $medium-min-width) {
+    grid-area: 7 / 2 / 8 / 3;
+  }
+
+  @media (min-width: $large-min-width) {
+    width: 310px;
+  }
+}

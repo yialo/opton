@@ -1,0 +1,96 @@
+.product-card {
+  display: flex;
+  width: 100%;
+}
+
+.product-card__link {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  padding-top: 16px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.05);
+
+  .product-card--software & {
+    padding-top: 0;
+  }
+}
+
+.product-card__image {
+  @include margin-hor;
+  display: block;
+  width: 181px;
+  height: 194px;
+  margin-bottom: 8px;
+
+  .product-card--production & {
+    margin-bottom: 40px;
+  }
+}
+
+.product-card__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.product-card__caption {
+  @include margin-hor;
+  @include font(500, 18px, 21px);
+  width: 260px;
+  margin-top: 0;
+  margin-bottom: 32px;
+
+  .product-card--software & {
+    margin-bottom: 16px;
+  }
+}
+
+.product-card__tip {
+  @include font(500, 16px, 19px);
+  display: block;
+  margin-top: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $blue;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition-property: color, background-color;
+  transition-duration: 0.1s;
+
+  .product-card__link:hover & {
+    color: white;
+    background-color: $blue;
+  }
+}
+
+.product-card__label {
+  @include font(900, 120px, 146px);
+  display: block;
+  margin-bottom: 23px;
+  padding-top: 16px;
+  padding-bottom: 54px;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: $gray-breadcrumbs;
+  background-image: linear-gradient(rgba(245, 245, 245, 1) 0%, white 100%);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  transition-property: color;
+  transition-duration: 0.1s;
+
+  .product-card__link:hover & {
+    color: $blue;
+  }
+}
+
+.product-card__details {
+  @include font(400, 16px, 23px);
+  margin-top: 0;
+  margin-bottom: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

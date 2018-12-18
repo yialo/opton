@@ -1,11 +1,18 @@
-mixin navigation(navigation_PageId, componentPosition)
-  nav.navigation(class='navigation--' + componentPosition)
+mixin navigation(navigation_options)
+  nav.navigation(class=`navigation--${navigation_options.componentPosition}`)
     ul.navigation__list
-      mixin navigation__item(itemPath, itemText)
+      mixin navigation__item(navigationItem_options)
+        -
+          let itemLink = {href: `${navigationItem_options.path}.html`};
+          let currentItemClass = '';
+        if (navigationItem_options.path === navigation_options.pageId)
+          -
+            itemLink = '';
+            currentItemClass = {class: 'navigation__link--current'};
         li.navigation__item
-          - var itemLink = {href: itemPath + '.html'};
-          if (itemPath === navigation_PageId)
-            - var itemLink = '';
-          a.navigation__link&attributes(itemLink)= itemText
+          a.navigation__link&attributes(currentItemClass, itemLink)= navigationItem_options.text
       each value, key in navigationData
-        +navigation__item(key, value)
+        +navigation__item({
+          path: key,
+          text: value
+        })

@@ -2,8 +2,12 @@ extends common/_t_default.pug
 
 block variables
   -
-    var page = {
+    const page = {
       id: 'brands',
       title: 'Бренды',
-      heading: 'Бренды'
+      heading: 'Партнёры'
     };
+
+block page-main
+  .page-main__brands
+    +brands()

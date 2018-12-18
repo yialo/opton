@@ -1,0 +1,24 @@
+.breadcrumbs__list {
+  @include list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -5px;
+}
+
+.breadcrumbs__item {
+  margin-bottom: 5px;
+  color: $gray-breadcrumbs;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+
+    &::after {
+      content: "/";
+      margin-left: 10px;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  @include font(400, 14px, 16px);
+}

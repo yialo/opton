@@ -1,15 +1,32 @@
 mixin promo()
-  section.promo
-    .promo__inner
-      h2.promo__heading
-      .promo__slider
-        ul.promo__list
-      //- ul.promo__controls
-      //-   - var i = 1;
-      //-   mixin promo__control-item(i++)
-      //-     li.promo__control-item
-      //-       button.promo__button(type='button')
-      //-   while i <= 4
-      //-     +promo__control-item()
-
-
+  header.promo
+    .promo__slider.slider.js-slide-2
+      .promo__slider-container.slider__container
+        ul.promo__list.slider__body
+          mixin promo__item(promoItem_options)
+            li.promo__item(class=`promo__item--${promoItem_options.number}`)
+              .promo__inner.aligner
+                h3.promo__title= promoItem_options.title
+                p.promo__subtitle= promoItem_options.subtitle
+          each value, index in promoItemsData
+            +promo__item({
+              number: index + 1,
+              title: value.title,
+              subtitle: value.subtitle
+            })
+      .promo__slider-controls.slider__controls
+        .slider__controls-wrapper
+          ul.slider__control-list
+            mixin slider__control-item(sliderControlItem_options)
+              - let currentItemClass = '';
+              if sliderControlItem_options.current === sliderControlItem_options.number
+                - currentItemClass = {class: 'slider__control-button--current'};
+              li.slider__control-item
+                button.slider__control-button(class=`slider__control-button--${sliderControlItem_options.number}`)&attributes(currentItemClass)
+                  span.visually-hidden= `Слайд №${sliderControlItem_options.number}`
+            - let i = 1;
+            while i <= 3
+              +slider__control-item({
+                number: i++,
+                current: 2
+              })
