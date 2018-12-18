@@ -16,6 +16,14 @@
 .service-catalog__heading {
   margin-top: 0;
   margin-bottom: 30px;
+
+  @media (min-width: $medium-min-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 64px;
+  }
 }
 
 .service-catalog__description {

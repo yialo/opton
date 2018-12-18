@@ -16,7 +16,7 @@
   align-items: center;
   width: 100%;
   min-height: 106px;
-  max-height: 333px;
+  max-height: 219px;
   overflow: hidden;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.4);
@@ -30,7 +30,8 @@
 
   @media (min-width: $medium-min-width) {
     min-height: 70px;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 
     .service-card__link:hover & {
       min-height: 90px;
@@ -39,7 +40,8 @@
 
   @media (min-width: $large-min-width) {
     min-height: 113px;
-    padding: 40px 32px;
+    padding-left: 32px;
+    padding-right: 32px;
 
     .service-card__link:hover & {
       min-height: 173px;
