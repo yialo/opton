@@ -2,7 +2,7 @@ $pagesWithHeaderMarginBottom: (
   "production",
   "contacts",
   "software",
-  "product",
+  "product"
 );
 
 .page__header {
@@ -13,6 +13,16 @@ $pagesWithHeaderMarginBottom: (
       @media (min-width: $medium-min-width) {
         margin-bottom: 56px;
       }
+
+      @media (min-width: $large-min-width) {
+        margin-bottom: 56px;
+      }
+    }
+  }
+
+  .page--product & {
+    @media (min-width: $large-min-width) {
+      margin-bottom: 40px;
     }
   }
 }
@@ -34,6 +44,12 @@ $pagesWithHeaderMarginBottom: (
   @media (min-width: $medium-min-width) {
     .page--product & {
       margin-bottom: 80px;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    .page--product & {
+      margin-bottom: 128px;
     }
   }
 }

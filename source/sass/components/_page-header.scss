@@ -218,4 +218,12 @@
 .page-header__breadcrumbs {
   position: relative;
   margin-top: 30px;
+
+  @media (min-width: $medium-min-width) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-top: 56px;
+  }
 }

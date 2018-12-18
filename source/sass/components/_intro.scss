@@ -16,6 +16,7 @@
     grid-template-areas:
       "h i"
       "d i";
+    grid-template-rows: auto 1fr;
     grid-row-gap: 0;
     grid-column-gap: 40px;
     padding-top: 0;
@@ -68,11 +69,11 @@
   margin-bottom: 0;
 
   @media (min-width: $medium-min-width) {
-    margin-bottom: 40px;
+    margin-top: 40px;
     font-size: 18px;
   }
 
   @media (min-width: $large-min-width) {
-    margin-bottom: 140px;
+    margin-top: 55px;
   }
 }

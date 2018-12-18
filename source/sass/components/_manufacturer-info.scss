@@ -7,6 +7,10 @@
   width: 109px;
   height: 109px;
   margin-right: 20px;
+
+  @media (min-width: $large-min-width) {
+    margin-right: 84px;
+  }
 }
 
 .manufacturer-info__legend {

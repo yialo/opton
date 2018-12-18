@@ -19,6 +19,11 @@
     font-size: 32px;
     line-height: 36px;
   }
+
+  @media (min-width: $large-min-width) {
+    width: 680px;
+    margin-bottom: 40px;
+  }
 }
 
 .product-features__list {
@@ -30,6 +35,10 @@
     grid-template-rows: repeat(2, auto);
     grid-auto-flow: column;
     grid-gap: 48px 24px;
+  }
+
+  @media (min-width: $large-min-width) {
+    grid-column-gap: 56px;
   }
 }
 
@@ -48,7 +57,7 @@
 .product-features__caption {
   @include font(500, 28px, 33px);
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: $blue;
 }
 

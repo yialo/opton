@@ -8,6 +8,13 @@
     grid-row-gap: 0;
     grid-column-gap: 40px;
   }
+
+  @media (min-width: $large-min-width) {
+    grid-template-rows: auto 18px auto 42px 1fr 5px auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 84px;
+    align-items: start;
+  }
 }
 
 .product-review__image-wrapper {
@@ -16,6 +23,14 @@
 
   @media (min-width: $medium-min-width) {
     grid-area: 1 / 1 / 6 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: $large-min-width) {
+    padding-top: 22px;
+    padding-bottom: 22px;
   }
 }
 
@@ -60,10 +75,18 @@
   @media (min-width: $medium-min-width) {
     grid-area: 7 / 1 / 8 / 2;
   }
+
+  @media (min-width: $large-min-width) {
+    margin-top: 35px;
+  }
 }
 
 .product-review__button {
   @media (min-width: $medium-min-width) {
     grid-area: 7 / 2 / 8 / 3;
+  }
+
+  @media (min-width: $large-min-width) {
+    width: 310px;
   }
 }
