@@ -10,6 +10,12 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @media (min-width: $large-min-width) {
+    justify-content: flex-start;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
 }
 
 .page-footer__navigation {
@@ -18,6 +24,10 @@
   @media (min-width: $medium-min-width) {
     margin-bottom: 0;
   }
+
+  @media (min-width: $large-min-width) {
+    margin-right: 155px;
+  }
 }
 
 .page-footer__social {
@@ -25,6 +35,10 @@
 
   @media (min-width: $medium-min-width) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-right: auto;
   }
 }
 

@@ -4,11 +4,20 @@
   flex-wrap: wrap;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
 
-  .is-menu-visible & {
-    z-index: 1;
+  @media (max-width: $medium-max-width) {
+    padding-top: 20px;
+
+    .is-menu-visible & {
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $large-min-width) {
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 37px;
+    padding-bottom: 28px;
   }
 }
 
@@ -19,7 +28,14 @@
 
   @media (min-width: $medium-min-width) {
     width: 100%;
+    padding-bottom: 25px;
     padding-left: 40px;
+  }
+
+  @media (min-width: $large-min-width) {
+    margin-bottom: 24px;
+    padding-bottom: 34px;
+    padding-left: 0;
   }
 }
 
@@ -33,8 +49,12 @@
 
   @media (min-width: $medium-min-width) {
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 20px;
+  }
+
+  @media (min-width: $large-min-width) {
+    display: none;
   }
 }
 
@@ -114,30 +134,38 @@
 }
 
 .page-header__navigation {
-  position: absolute;
-  top: 46px;
-  right: 0;
-  z-index: -1;
-  width: calc(100% - 80px);
-  overflow: hidden;
+  @media (max-width: $medium-max-width) {
+    position: absolute;
+    top: 46px;
+    right: 0;
+    z-index: -1;
+    width: calc(100% - 80px);
+    overflow: hidden;
 
-  .is-menu-visible & {
-    z-index: 0;
+    .is-menu-visible & {
+      z-index: 0;
+    }
+
+    @media (min-width: $medium-min-width) {
+      top: 70px;
+      left: 0;
+      right: auto;
+      width: 50%;
+    }
   }
 
-  @media (min-width: $medium-min-width) {
-    top: 55px;
-    left: 0;
-    right: auto;
-    width: 50%;
+  @media (min-width: $large-min-width) {
+    width: 845px;
   }
 }
 
 .page-header__navigation-inner {
-  transform: translateY(-100%);
+  @media (max-width: $medium-max-width) {
+    transform: translateY(-100%);
 
-  .is-menu-visible & {
-    transform: translateY(0);
+    .is-menu-visible & {
+      transform: translateY(0);
+    }
   }
 }
 
@@ -156,6 +184,14 @@
     flex-wrap: nowrap;
     justify-content: space-around;
   }
+
+  @media (min-width: $large-min-width) {
+    justify-content: space-between;
+    align-content: stretch;
+    width: 290px;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .page-header__contact {
@@ -172,6 +208,10 @@
     &:not(:last-child) {
       margin-bottom: 0;
     }
+  }
+
+  @media (min-width: $large-min-width) {
+    text-align: left;
   }
 }
 
