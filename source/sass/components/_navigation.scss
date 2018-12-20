@@ -1,9 +1,9 @@
 .navigation__list {
   @include list;
-  border-top: 1px solid $gray-navigation-border;
 
   .navigation--header & {
     @include font(400, 16px, 19px);
+    border-top: 1px solid $gray-navigation-border;
   }
 
   .navigation--footer & {

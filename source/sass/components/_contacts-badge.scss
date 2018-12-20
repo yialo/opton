@@ -1,0 +1,28 @@
+.contacts-badge {
+  @include list;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: $blue;
+}
+
+//   @media (min-width: $medium-min-width) {
+//     width: 100%;
+//     flex-wrap: nowrap;
+//     justify-content: space-around;
+//   }
+
+//   @media (min-width: $large-min-width) {
+//     justify-content: space-between;
+//     align-content: stretch;
+//     width: 290px;
+//     font-size: 14px;
+//     line-height: 16px;
+//   }
+// }
+
+.contacts-badge__item {
+  @include font(400, 12px, 14px);
+  text-transform: uppercase;
+  color: white;
+}

@@ -1,15 +1,17 @@
 .logo {
-  width: 183px;
   height: auto;
+  padding: 12px 20px;
+  background-color: $gray-header;
+}
+
+.logo__link {
+  width: 183px;
+  display: block;
 
   @media (min-width: $medium-min-width) {
     @include margin-hor;
     width: 443px;
   }
-}
-
-.logo__link {
-  display: block;
 }
 
 .logo__image {

@@ -1,0 +1,17 @@
+mixin navigation-controls
+  .navigation-controls
+    button.navigation-controls__button.dropdown__toggle(
+      type='button'
+    )
+      span(
+        class=[
+          'visually-hidden',
+          'dropdown__tip',
+          'dropdown__tip--closed'
+        ]) Показать главное меню
+      span(
+        class=[
+          'visually-hidden',
+          'dropdown__tip',
+          'dropdown__tip--opened'
+        ]) Скрыть главное меню
