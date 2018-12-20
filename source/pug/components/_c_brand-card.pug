@@ -6,6 +6,7 @@ mixin brand-card(brandCard_number)
       h3.brand-card__title= brandLogoNames[brandCard_number]
       ul.brand-card__list
         mixin brand-card__item(brandsItem_text)
-          li.brand-card__item= brandsItem_text
+          li.brand-card__item
+            a.brand-card__link(href='#')= brandsItem_text
         each value, index in brandCardLists[brandCard_number]
           +brand-card__item(value)

@@ -1,20 +1,23 @@
 mixin page-footer(pageFooter_pageId)
   footer.page-footer
-    .page-footer__inner.aligner
-      .page-footer__navigation
-        +navigation({
-          pageId: pageFooter_pageId,
-          componentPosition: 'footer'
-        })
-      .page-footer__social
-        +social()
-      ul.page-footer__contact-list
-        li.page-footer__contact
-          span.page-footer__contact-content.page-footer__contact-content--string
-            | г. Москва, ул. Коштоянца д. 12, оф. 1
-        li.page-footer__contact
-          a.page-footer__contact-content.page-footer__contact-content--link(href='tel:+74956645520')
-            | +7 (495) 664-55-20
-        li.page-footer__contact
-          a.page-footer__contact-content.page-footer__contact-content--link(href='mailto:info@mail.ru')
-            | info@mail.ru
+    .page-footer__inner
+      .page-footer__navigation-wrapper
+        .page-footer__navigation
+          +navigation({
+            pageId: pageFooter_pageId,
+            componentPosition: 'footer'
+          })
+      .page-footer__social-wrapper
+        .page-footer__social
+          +social()
+      .page-footer__contacts-wrapper
+        ul.page-footer__contact-list
+          li.page-footer__contact.page-footer__contact--address
+            span.page-footer__contact-content.page-footer__contact-content--string
+              | г. Москва, ул. Коштоянца д. 12, оф. 1
+          li.page-footer__contact.page-footer__contact--phone
+            a.page-footer__contact-content.page-footer__contact-content--link(href='tel:+74956645520')
+              | +7 (495) 664-55-20
+          li.page-footer__contact.page-footer__contact--email
+            a.page-footer__contact-content.page-footer__contact-content--link(href='mailto:info@mail.ru')
+              | info@mail.ru
