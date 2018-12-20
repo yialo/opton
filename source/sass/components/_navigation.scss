@@ -1,5 +1,6 @@
 .navigation__list {
   @include list;
+  border-top: 1px solid $gray-navigation-border;
 
   .navigation--header & {
     @include font(400, 16px, 19px);
@@ -36,26 +37,11 @@
   }
 }
 
-.navigation__item {
-  @media (max-width: $medium-max-width) {
-    .navigation--header & {
-      border: 1px solid $gray-border;
-      border-top-style: none;
-
-      &:first-child {
-        border-top-style: solid;
-      }
-    }
-  }
-}
-
 .navigation__link {
   @media (max-width: $medium-max-width) {
     .navigation--header & {
       display: block;
-      padding: 10px 15px;
-      text-align: center;
-      background-color: white;
+      padding: 16px 20px;
       transition-property: background-color;
       transition-duration: 0.1s;
 
@@ -64,11 +50,11 @@
       }
 
       &--current {
-        background-color: $gray-border;
+        background-color: $gray-navigation-border;
       }
 
       &--current:hover {
-        background-color: $gray-border;
+        background-color: $gray-navigation-border;
       }
     }
   }

@@ -1,12 +1,15 @@
-.logo__link {
-  display: block;
-  width: 280px;
+.logo {
+  width: 183px;
   height: auto;
 
   @media (min-width: $medium-min-width) {
     @include margin-hor;
     width: 443px;
   }
+}
+
+.logo__link {
+  display: block;
 }
 
 .logo__image {

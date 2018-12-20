@@ -72,7 +72,7 @@
 
 .page-footer__contacts-wrapper {
   order: -1;
-  background-color: #fafafa;
+  background-color: $gray-header;
 
   @media (min-width: $medium-min-width) {
     order: 0;

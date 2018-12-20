@@ -2,43 +2,45 @@ mixin page-header(pageHeader_options)
   header.page-header(
     class=`page-header--${pageHeader_options.pageId}`
     )
-    .page-header__base.aligner
-      .page-header__logo
-        +logo({
-          pageId: pageHeader_options.pageId,
-          pageHeading: pageHeader_options.pageHeading
-        })
-      .page-header__menu-controls
-        button.page-header__button(
-          type='button'
-        )
-          span(
-            class=[
-              'visually-hidden',
-              'page-header__button-text',
-              'page-header__button-text--closed'
-            ]
-          ) Показать главное меню
-          span(
-            class=[
-              'visually-hidden',
-              'page-header__button-text',
-              'page-header__button-text--opened'
-            ]
-          ) Скрыть главное меню
-      .page-header__navigation
-        .page-header__navigation-inner
-          +navigation({
+    .page-header__base
+      .page-header__outer-wrapper
+        .page-header__inner-wrapper
+          +logo({
             pageId: pageHeader_options.pageId,
-            componentPosition: 'header'
+            pageHeading: pageHeader_options.pageHeading
           })
-      ul.page-header__contact-list
-        li.page-header__contact
-          a.page-header__contact-content.page-header__contact-content--email(href='mailto:info@mail.ru')
-            | info@mail.ru
-        li.page-header__contact
-          a.page-header__contact-content.page-header__contact-content--tel(href='tel:+74956645520')
-            | +7 (495) 664-55-20
+          .page-header__menu-controls
+            button.page-header__button(
+              type='button'
+            )
+              span(
+                class=[
+                  'visually-hidden',
+                  'page-header__button-text',
+                  'page-header__button-text--closed'
+                ]
+              ) Показать главное меню
+              span(
+                class=[
+                  'visually-hidden',
+                  'page-header__button-text',
+                  'page-header__button-text--opened'
+                ]
+              ) Скрыть главное меню
+          .page-header__navigation
+            .page-header__navigation-inner
+              +navigation({
+                pageId: pageHeader_options.pageId,
+                componentPosition: 'header'
+              })
+      .page-header__contacts
+        ul.page-header__contact-list
+          li.page-header__contact
+            a.page-header__contact-content.page-header__contact-content--email(href='mailto:info@mail.ru')
+              | info@mail.ru
+          li.page-header__contact
+            a.page-header__contact-content.page-header__contact-content--tel(href='tel:+74956645520')
+              | +7 (495) 664-55-20
     each name in hasBanner
       if (name === pageHeader_options.pageId)
         .page-header__banner
