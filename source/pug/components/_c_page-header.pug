@@ -11,11 +11,10 @@ mixin page-header(pageHeader_options)
       .page-header__navigation-controls
         +navigation-controls()
       .page-header__navigation
-        .page-header__navigation-inner
-          +navigation({
-            pageId: pageHeader_options.pageId,
-            componentPosition: 'header'
-          })
+        +navigation({
+          pageId: pageHeader_options.pageId,
+          componentPosition: 'header'
+        })
       .page-header__contacts
         +contacts-badge()
     each name in hasBanner

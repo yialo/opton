@@ -1,94 +1,94 @@
 .page-header__base {
+  position: relative;
   display: grid;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: auto 280px 40px auto;
+  grid-template: repeat(3, auto) / auto;
+
+  @media (min-width: $medium-min-width) {
+    @include margin-hor;
+    width: $medium-min-width;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   @media (min-width: $large-min-width) {
-    justify-content: space-between;
-    align-items: baseline;
-    padding-top: 37px;
-    padding-bottom: 28px;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 845px 1fr;
+    grid-column-gap: 140px;
+    width: $large-min-width;
   }
 }
 
 .page-header__logo {
-  grid-area: 2 / 2 / 3 / 4;
+  grid-area: 2 / 1 / 3 / 2;
+  background-color: $gray-header;
+
+  @media (min-width: $medium-min-width) {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: transparent;
+  }
+
+  @media (min-width: $large-min-width) {
+    grid-area: 1 / 1 / 2 / 3;
+  }
 }
 
 .page-header__navigation-controls {
-  grid-area: 2 / 3 / 3 / 4;
+  grid-area: 2 / 1 / 3 / 2;
+  position: absolute;
+  top: 10px;
+  left: calc(50% + 120px);
   display: flex;
   align-items: center;
 
   @media (min-width: $medium-min-width) {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-  }
-
-  @media (min-width: $large-min-width) {
     display: none;
   }
 }
 
 .page-header__navigation {
-  grid-area: 3 / 2 / 4 / 4;
+  grid-area: 3 / 1 / 4 / 2;
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 160px);
+  background-color: $gray-header;
 
-  @media (max-width: $medium-max-width) {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: -1;
+  @media (min-width: $medium-min-width) {
+    position: static;
+    left: auto;
+    z-index: auto;
     width: 100%;
-    overflow: hidden;
-    background-color: $gray-header;
-
-    .is-menu-visible & {
-      z-index: 0;
-    }
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent;
   }
 
   @media (min-width: $large-min-width) {
-    width: 845px;
+    grid-area: 2 / 1 / 3 / 2;
+    align-self: baseline;
+    width: auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
 .page-header__contacts {
-  grid-area: 1 / 2 / 2 / 4;
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  background-color: $blue;
+
+  @media (min-width: $medium-min-width) {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: transparent;
+  }
+
+  @media (min-width: $large-min-width) {
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: baseline;
+    width: auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
-
-// .page-header__inner-wrapper {
-//   @include margin-hor;
-//   position: relative;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   width: $small-min-width;
-
-
-//   @media (min-width: $medium-min-width) {
-//     width: 100%;
-//     padding-bottom: 25px;
-//     padding-left: 40px;
-//     border-bottom: 1px solid $gray-navigation-border;
-//   }
-
-//   @media (min-width: $large-min-width) {
-//     margin-bottom: 24px;
-//     padding-bottom: 34px;
-//     padding-left: 0;
-//   }
-// }
-
-// .page-header__navigation-inner {
-//   @media (max-width: $medium-max-width) {
-//     transform: translateY(-100%);
-
-//     .is-menu-visible & {
-//       transform: translateY(0);
-//     }
-//   }
-// }
 
 .page-header__breadcrumbs {
   position: relative;

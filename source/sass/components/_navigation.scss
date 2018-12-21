@@ -1,3 +1,15 @@
+.navigation {
+  &--header {
+    width: $small-min-width;
+  }
+
+  @media (min-width: $medium-min-width) {
+    &--header {
+      width: auto;
+    }
+  }
+}
+
 .navigation__list {
   @include list;
 
@@ -17,18 +29,15 @@
     color: white;
   }
 
-  @media (max-width: $medium-max-width) {
+  @media (min-width: $medium-min-width) {
     .navigation--header & {
-      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-top-style: none;
     }
   }
 
   @media (min-width: $large-min-width) {
-    .navigation--header & {
-      display: flex;
-      justify-content: space-between;
-    }
-
     .navigation--footer & {
       grid-gap: 24px 85px;
       font-size: 14px;
@@ -38,23 +47,33 @@
 }
 
 .navigation__link {
-  @media (max-width: $medium-max-width) {
+  .navigation--header & {
+    display: block;
+    padding: 16px 20px;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+
+    &:hover {
+      background-color: $gray-intro-bg;
+    }
+
+    &--current {
+      background-color: $gray-navigation-border;
+    }
+
+    &--current:hover {
+      background-color: $gray-navigation-border;
+    }
+  }
+
+  @media (min-width: $medium-min-width) {
     .navigation--header & {
-      display: block;
-      padding: 16px 20px;
-      transition-property: background-color;
-      transition-duration: 0.1s;
+      display: inline;
+      padding: 0;
+      background-color: transparent;
 
       &:hover {
-        background-color: $gray-intro-bg;
-      }
-
-      &--current {
-        background-color: $gray-navigation-border;
-      }
-
-      &--current:hover {
-        background-color: $gray-navigation-border;
+        background-color: transparent;
       }
     }
   }

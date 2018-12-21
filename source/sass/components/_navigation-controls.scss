@@ -54,20 +54,20 @@
   }
 }
 
-.navigation-controls__button-text {
-  &--closed {
-    display: inline;
+// .navigation-controls__button-text {
+//   &--closed {
+//     display: inline;
 
-    .is-menu-visible & {
-      display: none;
-    }
-  }
+//     .is-menu-visible & {
+//       display: none;
+//     }
+//   }
 
-  &--opened {
-    display: none;
+//   &--opened {
+//     display: none;
 
-    .is-menu-visible & {
-      display: inline;
-    }
-  }
-}
+//     .is-menu-visible & {
+//       display: inline;
+//     }
+//   }
+// }
