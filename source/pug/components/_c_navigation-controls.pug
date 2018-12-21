@@ -6,12 +6,13 @@ mixin navigation-controls
       span(
         class=[
           'visually-hidden',
-          'dropdown__tip',
-          'dropdown__tip--closed'
+          'navigation-controls__button-text',
+          'dropdown__closed'
         ]) Показать главное меню
-      span(
-        class=[
-          'visually-hidden',
-          'dropdown__tip',
-          'dropdown__tip--opened'
-        ]) Скрыть главное меню
+      span.navigation-controls__inner
+        span(
+          class=[
+            'visually-hidden',
+            'navigation-controls__button-text',
+            'dropdown__opened'
+          ]) Скрыть главное меню

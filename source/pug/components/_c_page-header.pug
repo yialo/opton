@@ -10,7 +10,7 @@ mixin page-header(pageHeader_options)
         })
       .page-header__navigation-controls
         +navigation-controls()
-      .page-header__navigation
+      .page-header__navigation.dropdown__body
         +navigation({
           pageId: pageHeader_options.pageId,
           componentPosition: 'header'
