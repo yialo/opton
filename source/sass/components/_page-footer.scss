@@ -97,10 +97,15 @@
 
   @media (min-width: $medium-min-width) {
     @include margin-hor(0);
-    width: auto;
+    width: 200px;
     padding: 0;
     font-weight: 500;
+    text-transform: none;
     color: white;
+  }
+
+  @media (min-width: $large-min-width) {
+    width: auto;
   }
 }
 
@@ -117,6 +122,7 @@
   }
 
   @media (min-width: $medium-min-width) {
+    width: auto;
     text-align: right;
 
     &:not(:last-child) {
