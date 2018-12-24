@@ -11,6 +11,7 @@
   @media (min-width: $medium-min-width) {
     @include margin-hor;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: $medium-min-width;
     padding: 40px 20px;
@@ -63,6 +64,7 @@
 
   @media (min-width: $medium-min-width) {
     width: auto;
+    padding-bottom: 0;
   }
 
   @media (min-width: $large-min-width) {
@@ -128,5 +130,28 @@
     &:not(:last-child) {
       margin-bottom: 24px;
     }
+  }
+}
+
+.page-footer__copyright {
+  background-color: $dark-gray;
+
+  @media (min-width: $medium-min-width) {
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
+.page-footer__copyright-text {
+  @include font(400, 9px, 12px);
+  display: block;
+  padding-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+
+  @media (min-width: $medium-min-width) {
+    margin-top: 40px;
+    padding-bottom: 0;
   }
 }
