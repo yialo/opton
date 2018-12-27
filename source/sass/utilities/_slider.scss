@@ -2,18 +2,6 @@
   position: relative;
 }
 
-.slider__container {
-  overflow: hidden;
-}
-
-.slider__body {
-  @for $i from 1 through 3 {
-    .js-slide-#{$i} & {
-      transform: translateX(calc((#{$i} - 1) * -100% / 3));
-    }
-  }
-}
-
 .slider__controls {
   position: absolute;
   bottom: 20px;
@@ -44,17 +32,16 @@
   }
 }
 
-.slider__control-list {
+.slick-dots {
   @include list;
   display: flex;
-  margin-bottom: 0;
 
   @media (min-width: $large-min-width) {
     display: block;
   }
 }
 
-.slider__control-item {
+.slick-dots li {
   &:not(:last-child) {
     margin-right: 30px;
   }
@@ -67,21 +54,22 @@
   }
 }
 
-.slider__control-button {
+.slick-dots button {
   display: block;
   width: 10px;
   height: 10px;
   padding: 0;
+  font-size: 0;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 50%;
-
-  &--current {
-    background-color: white;
-  }
 
   @media (min-width: $large-min-width) {
     width: 14px;
     height: 14px;
   }
+}
+
+.slick-active button {
+  background-color: white;
 }

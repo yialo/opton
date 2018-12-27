@@ -1,8 +1,21 @@
+.navigation {
+  &--header {
+    width: $small-min-width;
+  }
+
+  @media (min-width: $medium-min-width) {
+    &--header {
+      width: auto;
+    }
+  }
+}
+
 .navigation__list {
   @include list;
 
   .navigation--header & {
     @include font(400, 16px, 19px);
+    border-top: 1px solid $gray-navigation-border;
   }
 
   .navigation--footer & {
@@ -16,18 +29,15 @@
     color: white;
   }
 
-  @media (max-width: $medium-max-width) {
+  @media (min-width: $medium-min-width) {
     .navigation--header & {
-      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      border-top-style: none;
     }
   }
 
   @media (min-width: $large-min-width) {
-    .navigation--header & {
-      display: flex;
-      justify-content: space-between;
-    }
-
     .navigation--footer & {
       grid-gap: 24px 85px;
       font-size: 14px;
@@ -36,39 +46,34 @@
   }
 }
 
-.navigation__item {
-  @media (max-width: $medium-max-width) {
-    .navigation--header & {
-      border: 1px solid $gray-border;
-      border-top-style: none;
+.navigation__link {
+  .navigation--header & {
+    display: block;
+    padding: 16px 20px;
+    transition-property: background-color;
+    transition-duration: 0.1s;
 
-      &:first-child {
-        border-top-style: solid;
-      }
+    &:hover {
+      background-color: $gray-intro-bg;
+    }
+
+    &--current {
+      background-color: $gray-navigation-border;
+    }
+
+    &--current:hover {
+      background-color: $gray-navigation-border;
     }
   }
-}
 
-.navigation__link {
-  @media (max-width: $medium-max-width) {
+  @media (min-width: $medium-min-width) {
     .navigation--header & {
-      display: block;
-      padding: 10px 15px;
-      text-align: center;
-      background-color: white;
-      transition-property: background-color;
-      transition-duration: 0.1s;
+      display: inline;
+      padding: 0;
+      background-color: transparent;
 
       &:hover {
-        background-color: $gray-intro-bg;
-      }
-
-      &--current {
-        background-color: $gray-border;
-      }
-
-      &--current:hover {
-        background-color: $gray-border;
+        background-color: transparent;
       }
     }
   }

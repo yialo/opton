@@ -9,13 +9,7 @@ $social-icon-names: (facebook, twitter, instagram);
 
 .social__item {
   &:not(:last-child) {
-    margin-right: 32px;
-  }
-
-  @media (min-width: $large-min-width) {
-    &:not(:last-child) {
-      margin-right: 48px;
-    }
+    margin-right: 48px;
   }
 }
 

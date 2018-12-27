@@ -1,7 +1,20 @@
-.logo__link {
-  display: block;
-  width: 280px;
+.logo {
+  @include margin-hor;
+  width: $small-min-width;
   height: auto;
+  padding: 12px 20px;
+
+  @media (min-width: $medium-min-width) {
+    @include margin-hor(0);
+    width: auto;
+    padding: 16px 0;
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.logo__link {
+  width: 183px;
+  display: block;
 
   @media (min-width: $medium-min-width) {
     @include margin-hor;

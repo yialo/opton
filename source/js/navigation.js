@@ -1,15 +1,15 @@
-const pageHeader = document.querySelector('.page-header');
-const pageHeaderButton = pageHeader.querySelector('.page-header__button');
-const pageHeaderButtonTextClosed = pageHeader.querySelector('.page-header__button-text--closed');
-const pageHeaderButtonTextOpened = pageHeader.querySelector('.page-header__button-text--opened');
+const dropdown = document.querySelector('.dropdown');
+const dropdownToggle = dropdown.querySelector('.dropdown__toggle');
+const dropdownTipClosed = dropdown.querySelector('.dropdown__closed');
+const dropdownTipOpened = dropdown.querySelector('.dropdown__opened');
 
-pageHeaderButton.addEventListener('click', function () {
-  pageHeader.classList.toggle('is-menu-visible');
+dropdownToggle.addEventListener('click', function () {
+  dropdown.classList.toggle('is-menu-visible');
 });
 
 window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27 && pageHeader.classList.contains('is-menu-visible')) {
+  if (evt.keyCode === 27 && dropdown.classList.contains('is-menu-visible')) {
     evt.preventDefault();
-    pageHeader.classList.toggle('is-menu-visible');
+    dropdown.classList.toggle('is-menu-visible');
   }
 });
