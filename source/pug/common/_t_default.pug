@@ -1,11 +1,16 @@
-- var siteName = 'Opton Engineering';
-- var viewportMediumMinWidth = '(min-width: 768px)';
-- var viewportLargeMinWidth = '(min-width: 1320px)';
+-
+  const siteName = 'Opton Engineering';
+  const viewportSmallMaxWidth = '(max-width: 767px)';
+  const viewportMediumMinWidth = '(min-width: 768px)';
+  const viewportMediumMaxWidth = '(max-width: 1319px)';
+  const viewportLargeMinWidth = '(min-width: 1320px)';
 
 block variables
 
 include _i_data.pug
 include _i_components.pug
+
+- const bodyModalClass = modalIncluded.includes(page.id) ? {class: 'modal'} : null;
 
 doctype html
 html(lang='ru')
@@ -22,10 +27,6 @@ html(lang='ru')
     link(rel='preload' href='fonts/roboto-bold.woff2' as='font' crossorigin)
     link(rel='preload' href='fonts/roboto-black.woff2' as='font' crossorigin)
     link(rel='stylesheet' href='css/main.min.css')
-
-  - let bodyModalClass = '';
-  if (modalIncluded.includes(page.id))
-    - bodyModalClass = {class: 'modal'};
   body.page(class=`page--${page.id}`)&attributes(bodyModalClass)
     .page__header
       +page-header({
