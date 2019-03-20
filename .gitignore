@@ -23,8 +23,5 @@ specification/
 node_modules/
 npm-debug.*
 
-# Build folder
-build/
-
 #Raw image folder
 source/img-raw/
