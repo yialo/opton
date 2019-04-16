@@ -18,7 +18,47 @@
   "../global/styles/_tags.scss";
 
 @import
-  "../components/scaffold/s-container/*.scss";
+  "../components/scaffold/s-aligner/*.scss",
+  "../components/scaffold/s-button-fix/*.scss",
+  "../components/scaffold/s-dropdown/*.scss",
+  "../components/scaffold/s-heading/*.scss",
+  "../components/scaffold/s-list/*.scss",
+  "../components/scaffold/s-modal/*.scss",
+  "../components/scaffold/s-paragraph/*.scss",
+  "../components/scaffold/s-picture/*.scss",
+  "../components/scaffold/s-slider/*.scss",
+  "../components/scaffold/s-visually-hidden/*.scss";
 
 @import
-  "../components/capital/about/*.scss";
+  "../components/capital/about/*.scss",
+  "../components/capital/banner/*.scss",
+  "../components/capital/brand-card/*.scss",
+  "../components/capital/brand-logo/*.scss",
+  "../components/capital/brands/*.scss",
+  "../components/capital/breadcrumbs/*.scss",
+  "../components/capital/button/*.scss",
+  "../components/capital/contacts/*.scss",
+  "../components/capital/contacts-badge/*.scss",
+  "../components/capital/download/*.scss",
+  "../components/capital/form-item/*.scss",
+  "../components/capital/intro/*.scss",
+  "../components/capital/logo/*.scss",
+  "../components/capital/manufacturer-info/*.scss",
+  "../components/capital/map/*.scss",
+  "../components/capital/navigation/*.scss",
+  "../components/capital/navigation-controls/*.scss",
+  "../components/capital/order-request/*.scss",
+  "../components/capital/page/*.scss",
+  "../components/capital/page-footer/*.scss",
+  "../components/capital/page-header/*.scss",
+  "../components/capital/page-main/*.scss",
+  "../components/capital/partners/*.scss",
+  "../components/capital/product-card/*.scss",
+  "../components/capital/product-catalog/*.scss",
+  "../components/capital/product-features/*.scss",
+  "../components/capital/product-review/*.scss",
+  "../components/capital/promo/*.scss",
+  "../components/capital/service-catalog/*.scss",
+  "../components/capital/service_card/*.scss",
+  "../components/capital/social/*.scss",
+  "../components/capital/training/*.scss";

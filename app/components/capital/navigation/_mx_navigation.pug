@@ -1,0 +1,28 @@
+mixin navigation(navigation_options)
+  -
+    const navigationData = {
+      'index': 'Главная',
+      'production': 'Продукция',
+      'services': 'Услуги',
+      'areas': 'Направления',
+      'brands': 'Бренды',
+      'about': 'О компании',
+      'contacts': 'Контакты'
+    };
+  nav.navigation(class=`navigation--${navigation_options.componentPosition}`)
+    ul.navigation__list
+      mixin navigation__item(navigationItem_options)
+        -
+          let itemLink = {href: `${navigationItem_options.path}.html`};
+          let currentItemClass = '';
+        if (navigationItem_options.path === navigation_options.pageId)
+          -
+            itemLink = '';
+            currentItemClass = {class: 'navigation__link--current'};
+        li.navigation__item
+          a.navigation__link&attributes(currentItemClass, itemLink)= navigationItem_options.text
+      each value, key in navigationData
+        +navigation__item({
+          path: key,
+          text: value
+        })

@@ -1,0 +1,18 @@
+mixin navigation-controls
+  .navigation-controls
+    button.navigation-controls__button.s-dropdown__toggle(
+      type='button'
+    )
+      span(
+        class=[
+          's-visually-hidden',
+          'navigation-controls__button-text',
+          's-dropdown__closed'
+        ]) Показать главное меню
+      span.navigation-controls__inner
+        span(
+          class=[
+            's-visually-hidden',
+            'navigation-controls__button-text',
+            's-dropdown__opened'
+          ]) Скрыть главное меню

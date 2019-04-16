@@ -1,7 +1,7 @@
-const dropdown = document.querySelector('.dropdown');
-const dropdownToggle = dropdown.querySelector('.dropdown__toggle');
-const dropdownTipClosed = dropdown.querySelector('.dropdown__closed');
-const dropdownTipOpened = dropdown.querySelector('.dropdown__opened');
+const dropdown = document.querySelector('.s-dropdown');
+const dropdownToggle = dropdown.querySelector('.s-dropdown__toggle');
+const dropdownTipClosed = dropdown.querySelector('.s-dropdown__closed');
+const dropdownTipOpened = dropdown.querySelector('.s-dropdown__opened');
 
 dropdownToggle.addEventListener('click', function () {
   dropdown.classList.toggle('is-menu-visible');
