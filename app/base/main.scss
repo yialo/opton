@@ -1,15 +1,15 @@
 @import
+  "../global/functions/*.scss",
+  "../global/data/*.scss",
+  "../global/methods/*.scss",
+  "../global/mixins/*.scss";
+
+@import
   "~normalize.css",
   "~slick-carousel/slick/slick.scss";
 
 @import
   "../vendor_customized/*.scss";
-
-@import
-  "../global/functions/*.scss",
-  "../global/data/*.scss",
-  "../global/methods/*.scss",
-  "../global/mixins/*.scss";
 
 @import
   "../global/styles/_fonts.scss",
@@ -22,10 +22,8 @@
   "../components/scaffold/s-button-fix/*.scss",
   "../components/scaffold/s-dropdown/*.scss",
   "../components/scaffold/s-heading/*.scss",
-  "../components/scaffold/s-list/*.scss",
   "../components/scaffold/s-modal/*.scss",
   "../components/scaffold/s-paragraph/*.scss",
-  "../components/scaffold/s-picture/*.scss",
   "../components/scaffold/s-slider/*.scss",
   "../components/scaffold/s-visually-hidden/*.scss";
 

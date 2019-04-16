@@ -1,6 +1,6 @@
 mixin training(training_options)
   .training
-    .training__inner.aligner
+    .training__inner.s-aligner
       picture.training__image-wrapper
         source(
           media=viewportLargeMinWidth
@@ -15,7 +15,7 @@ mixin training(training_options)
           alt='Обучение'
         )
       h1.training__heading.s-heading= training_options.heading
-      p.training__description.paragraph
+      p.training__description.s-paragraph
         | CONTURA — широкая платформа от ZEISS для гибкого, надежного и бескомпромиссного обеспечения качества. Последнее поколение еще точнее и предлагает большой пакет оптических датчиков в верхней части большего диапазона измерений. Выдающаяся технология сканирования, справочное программное обеспечение ZEISS CALYPSO и полностью настроенная общая концепция позволяют ZEISS CONTURA закрепить свое место в качестве стандарта в своем классе.
       .training__button
         +button({

@@ -1,6 +1,6 @@
 mixin product-review(productRevies_heading)
   section.product-review
-    .product-review__inner.aligner
+    .product-review__inner.s-aligner
       .product-review__image-wrapper
         picture
           source(
@@ -11,7 +11,7 @@ mixin product-review(productRevies_heading)
       h1.product-review__heading= productRevies_heading
       .product-review__download
         +download()
-      p.product-review__details.paragraph
+      p.product-review__details.s-paragraph
         | CONTURA — широкая платформа от ZEISS для гибкого, надежного и бескомпромиссного обеспечения качества. Последнее поколение еще точнее и предлагает большой пакет оптических датчиков в верхней части большего диапазона измерений. Выдающаяся технология сканирования, справочное программное обеспечение ZEISS CALYPSO и полностью настроенная общая концепция позволяют ZEISS CONTURA закрепить свое место в качестве стандарта в своем классе.
       .product-review__manufacturer-info
         +manufacturer-info()

@@ -1,9 +1,9 @@
 mixin contacts(contacts_options)
   .contacts
-    .contacts__inner.aligner
+    .contacts__inner.s-aligner
       h1(class=[
         'contacts__heading',
-        'heading'
+        's-heading'
       ])= contacts_options.heading
       ul.contacts__list
         mixin contacts__item(contactsList_options)

@@ -1,50 +1,50 @@
 mixin product-catalog(productCatalog_options)
   section.product-catalog(class=`product-catalog--${productCatalog_options.modifier}`)
-  .product-catalog__inner.aligner
-    case productCatalog_options.modifier
-      when 'production'
-        h2.s-visually-hidden= productCatalog_options.heading
-        ul.product-catalog__list
-          mixin product-catalog__item(productCatalogItem_number)
-            li.product-catalog__item
-              +product-card({
-                componentModifier: productCatalog_options.modifier,
-                itemNumber: productCatalogItem_number,
-                imageLegend: 'Продукция, изображение',
-                captionStack: productionProductCardCaptions
-              })
-          each value, index in productionProductCardCaptions
-            +product-catalog__item(index + 1)
-      when 'software'
-        h1.s-visually-hidden= productCatalog_options.heading
-        ul.product-catalog__list
-          mixin product-catalog__item(productCatalogItem_number)
-            li.product-catalog__item
-              +product-card({
-                componentModifier: productCatalog_options.modifier,
-                itemNumber: productCatalogItem_number,
-                captionStack: softwareProductCardCaptions,
-                labelStack: softwareProductCardLabels,
-                descriptionStack: softwareProductCardDescriptions
-              })
-          each value, index in softwareProductCardCaptions
-            +product-catalog__item(index + 1)
-      when 'equipment'
-      default
-        h2(class=[
-          'product-catalog__heading',
-          'heading',
-          'heading--underlined'
-        ])
-          span.heading__string= productCatalog_options.heading
-        ul.product-catalog__list
-          mixin product-catalog__item(productCatalogItem_number)
-            li.product-catalog__item
-              +product-card({
-                componentModifier: productCatalog_options.modifier,
-                itemNumber: productCatalogItem_number,
-                imageLegend: 'Оборудование, изображение',
-                captionStack: equipmentProductCardCaptions
-              })
-          each value, index in equipmentProductCardCaptions
-            +product-catalog__item(index + 1)
+    .product-catalog__inner.s-aligner
+      case productCatalog_options.modifier
+        when 'production'
+          h2.s-visually-hidden= productCatalog_options.heading
+          ul.product-catalog__list
+            mixin product-catalog__item(productCatalogItem_number)
+              li.product-catalog__item
+                +product-card({
+                  componentModifier: productCatalog_options.modifier,
+                  itemNumber: productCatalogItem_number,
+                  imageLegend: 'Продукция, изображение',
+                  captionStack: productionProductCardCaptions
+                })
+            each value, index in productionProductCardCaptions
+              +product-catalog__item(index + 1)
+        when 'software'
+          h1.s-visually-hidden= productCatalog_options.heading
+          ul.product-catalog__list
+            mixin product-catalog__item(productCatalogItem_number)
+              li.product-catalog__item
+                +product-card({
+                  componentModifier: productCatalog_options.modifier,
+                  itemNumber: productCatalogItem_number,
+                  captionStack: softwareProductCardCaptions,
+                  labelStack: softwareProductCardLabels,
+                  descriptionStack: softwareProductCardDescriptions
+                })
+            each value, index in softwareProductCardCaptions
+              +product-catalog__item(index + 1)
+        when 'equipment'
+        default
+          h2(class=[
+            'product-catalog__heading',
+            's-heading',
+            's-heading--underlined'
+          ])
+            span.s-heading__string= productCatalog_options.heading
+          ul.product-catalog__list
+            mixin product-catalog__item(productCatalogItem_number)
+              li.product-catalog__item
+                +product-card({
+                  componentModifier: productCatalog_options.modifier,
+                  itemNumber: productCatalogItem_number,
+                  imageLegend: 'Оборудование, изображение',
+                  captionStack: equipmentProductCardCaptions
+                })
+            each value, index in equipmentProductCardCaptions
+              +product-catalog__item(index + 1)

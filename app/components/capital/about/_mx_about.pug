@@ -6,9 +6,8 @@ mixin about(about_options)
       'Хорошо известно, что любые технологии теряют всякую важность без участия квалифицированного персонала. Более 40 высококвалифицированных специалистов на территории России готовы оказать поддержку предлагаемого оборудования. Профессиональная поддержка включает участие в проекте, полную предпродажную и послепродажную техническую поддержку, консультирование, проведение обучающих курсов для персонала заказчика с целью обеспечения максимальной эффективности проекта, как в настоящее время, так и в будущем.',
     ];
   .about
-    .about__inner.aligner
-      h1.s-heading.about__heading
-      ])= about_options.heading
+    .about__inner.s-aligner
+      h1.s-heading.about__heading= about_options.heading
       each paragraph in _SEPARATE_PARAGRAPHS
         p.about__paragraph.s-paragraph= paragraph
       p.about__paragraph.s-paragraph
