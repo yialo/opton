@@ -1,0 +1,21 @@
+-
+  const FONT_SETS = {
+    'roboto': {
+      weightSizes: [400, 500, 700, 900],
+      styleNames: ['normal'],
+    },
+    'harmonia_sans_pro_cyr': {
+      weightSizes: [400],
+      styleNames: ['normal'],
+    },
+  };
+
+each value, key in FONT_SETS
+  each weightValue in value.weightSizes
+    each styleValue in value.styleNames
+      link(
+        rel='preload',
+        href=`fonts/${key}-${weightValue}-${styleValue}.woff2`,
+        as='font',
+        crossorigin='anonymous',
+      )

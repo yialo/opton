@@ -1,0 +1,5 @@
++ slick-carousel@1.8.1
++ jquery@3.4.0
+added 1 package from 1 contributor, updated 1 package and audited 20205 packages in 13.589s
+found 2 vulnerabilities (1 low, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
