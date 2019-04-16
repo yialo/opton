@@ -1,6 +1,7 @@
 @mixin font($fontWeight: 400, $fontSize: 16px, $lineHeight: 19px) {
+  font-style: normal;
   font-weight: $fontWeight;
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "roboto", "Arial", sans-serif;
   font-size: $fontSize;
   line-height: $lineHeight;
 }

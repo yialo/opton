@@ -22,3 +22,45 @@ html(class='page', lang='ru')
       footer.body__footer
         block body__footer
     include ../components/capital/body/_body__Scripts.pug
+
+//- block variables
+
+//- include _i_data.pug
+//- include _i_components.pug
+
+//- - const bodyModalClass = modalIncluded.includes(page.id) ? {class: 'modal'} : null;
+
+//- doctype html
+//- html(lang='ru')
+//-   head
+//-     meta(charset='utf-8')
+//-     title= `${page.title} | ${siteName}`
+//-     meta(name='description' content='Официальный поставщик измерительного оборудования от ведущих мировых производителей')
+//-     meta(name='viewport' content='width=device-width, initial-scale=1')
+//-     meta(name='cmsmagazine' content='cdc79537f1d9f113c73cd2fd46ca0125')
+//-     meta(name='author' content='Веб-студия WayToStart')
+//-     link(rel='preload' href='fonts/roboto-light.woff2' as='font' crossorigin)
+//-     link(rel='preload' href='fonts/roboto-regular.woff2' as='font' crossorigin)
+//-     link(rel='preload' href='fonts/roboto-medium.woff2' as='font' crossorigin)
+//-     link(rel='preload' href='fonts/roboto-bold.woff2' as='font' crossorigin)
+//-     link(rel='preload' href='fonts/roboto-black.woff2' as='font' crossorigin)
+//-     link(rel='stylesheet' href='css/main.min.css')
+//-   body.page(class=`page--${page.id}`)&attributes(bodyModalClass)
+//-     .page__header
+//-       +page-header({
+//-         pageId: page.id,
+//-         pageHeading: page.heading
+//-       })
+//-     .page__main
+//-       main.page-main(class=`page-main--${page.id}`)
+//-         block page-main
+//-     .page__footer
+//-       +page-footer(page.id)
+//-     if (modalIncluded.includes(page.id))
+//-       .page__order-request.modal__window
+//-         +order-request()
+//-     block custom-scripts
+//-     script(src='js/picturefill.js')
+//-     script(src='js/navigation.js')
+//-     if (modalIncluded.includes(page.id))
+//-       script(src='js/modal.js')

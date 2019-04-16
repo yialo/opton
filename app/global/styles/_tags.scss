@@ -9,13 +9,9 @@ html {
 }
 
 body {
-  min-width: $page-min-width;
+  @include font();
+  min-width: $small-min-width;
   margin: 0;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1;
-  font-family: "Arial", sans-serif;
   color: black;
   background-color: white;
 }
@@ -25,23 +21,25 @@ a {
   color: inherit;
 }
 
-img,
-svg,
-picture,
-video {
-  display: block;
-}
+// TODO: check commented rules below
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: inherit;
-}
+// img,
+// svg,
+// picture,
+// video {
+//   display: block;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-weight: inherit;
+// }
 
 button {
-  display: block;
+  // display: block;
   cursor: pointer;
 }
