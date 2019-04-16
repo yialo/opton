@@ -1,22 +1,14 @@
 extends ../base/_template_html.pug
 
 block page-id
-  -
-    const page = {
-      id: 'product',
-      title: 'Карточка продукции',
-      heading: `Zeiss Contura G2`
-    };
+  - const $pageId = 'product';
 
 block page-main
   .page-main__product-review
-    +product-review(page.heading)
+    +product-review($pageHeading)
   .page-main__product-features
-    +product-features({
-      modifier: 'advantages',
-      headingText: 'Преимущества'
-    })
+    +product-features({ modifier: 'advantages', headingText: 'Преимущества' })
     +product-features({
       modifier: 'types',
-      headingText: 'Четыре подхода к активному сканированию direkt, RDS, aktiv или navigator'
+      headingText: 'Четыре подхода к активному сканированию direkt, RDS, aktiv или navigator',
     })

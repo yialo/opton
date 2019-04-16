@@ -1,21 +1,13 @@
 extends ../base/_template_html.pug
 
 block page-id
-  -
-    const page = {
-      id: 'index',
-      title: 'Главная',
-      heading: `Сайт компании ${siteName}`
-    };
+  - const $pageId = 'index';
 
 block page-main
   .page-main__promo
     +promo()
   .page-main__equipment
-    +product-catalog({
-      modifier: 'equipment',
-      heading: 'Оборудование'
-    })
+    +product-catalog({ modifier: 'equipment', heading: 'Оборудование' })
   .page-main__intro
     +intro()
   .page-main__partners

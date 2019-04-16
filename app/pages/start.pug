@@ -11,46 +11,8 @@ html(lang='ru')
     h1 Это стартовая страница для тестирования вёрстки
     p Пожалуйста, выберите интересующую страницу сайта:
     ul.tech__list
-      mixin tech__item(tech_options)
+      include ../global/data/_dt_pages.pug
+      each path, list in $PAGES
+        - const [title, headine] = list;
         li.tech__item
-          a.tech__link(href=`${tech_options.url}.html` target='_blank')= tech_options.text
-      +tech__item({
-        url: 'index',
-        text: 'Главная'
-      })
-      +tech__item({
-        url: 'about',
-        text: 'О компании'
-      })
-      +tech__item({
-        url: 'areas',
-        text: 'Направления'
-      })
-      +tech__item({
-        url: 'brands',
-        text: 'Бренды'
-      })
-      +tech__item({
-        url: 'contacts',
-        text: 'Контакты'
-      })
-      +tech__item({
-        url: 'product',
-        text: 'Продукт'
-      })
-      +tech__item({
-        url: 'production',
-        text: 'Продукция'
-      })
-      +tech__item({
-        url: 'services',
-        text: 'Услуги'
-      })
-      +tech__item({
-        url: 'software',
-        text: 'Программное обеспечение'
-      })
-      +tech__item({
-        url: 'training',
-        text: 'Обучение'
-      })
+          a.tech__link(href=`${path}.html`, target='_blank')= title

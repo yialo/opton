@@ -1,18 +1,11 @@
 extends ../base/_template_html.pug
 
 block page-id
-  -
-    const page = {
-      id: 'contacts',
-      title: 'Контакты',
-      heading: 'Контакты'
-    };
+  - const $pageId = 'contacts';
 
 block page-main
   .page-main__contacts
-    +contacts({
-      heading: page.heading
-    })
+    +contacts({ heading: $pageHeading })
   .page-main__map
     +map()
 

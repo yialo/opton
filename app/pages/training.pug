@@ -1,15 +1,8 @@
 extends ../base/_template_html.pug
 
 block page-id
-  -
-    const page = {
-      id: 'training',
-      title: 'Обучение',
-      heading: 'Обучение'
-    };
+  - const $pageId = 'training';
 
 block page-main
   .page-main__training
-    +training({
-      heading: page.heading
-    })
+    +training({ heading: $pageHeading })
