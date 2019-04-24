@@ -13,13 +13,13 @@ modalOpenButton.addEventListener('click', (evt) => {
   }
 });
 
-modalCloseButton.addEventListener('click', (evt) => {
+modalCloseButton.addEventListener('click', () => {
   if (pageWithModal.classList.contains('is-modal-visible')) {
     pageWithModal.classList.remove('is-modal-visible');
   }
 });
 
-modalCancelButton.addEventListener('click', (evt) => {
+modalCancelButton.addEventListener('click', () => {
   if (pageWithModal.classList.contains('is-modal-visible')) {
     pageWithModal.classList.remove('is-modal-visible');
   }

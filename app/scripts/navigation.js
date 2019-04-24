@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const dropdown = document.querySelector('.s-dropdown');
 const dropdownToggle = dropdown.querySelector('.s-dropdown__toggle');
 const dropdownTipClosed = dropdown.querySelector('.s-dropdown__closed');

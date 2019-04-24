@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 $('.promo__list').slick({
   autoplay: true,
   autoplaySpeed: 5000,
