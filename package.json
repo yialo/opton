@@ -45,7 +45,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/alekseiarrowaytostart/lyubava.git"
+    "url": "git+https://github.com/yialo/opton.git"
   },
   "scripts": {
     "build": "gulp build",
