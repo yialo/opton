@@ -1,0 +1,5 @@
+.#{$this}__list {
+  @include list();
+  @include font(400, 16px, 23px);
+  color: $dark-gray;
+}

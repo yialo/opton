@@ -1,0 +1,8 @@
+extends ../base/_template_html.pug
+
+block page-id
+  - const $pageId = 'production';
+
+block page-main
+  .page-main__production
+    +product-catalog({ modifier: 'production', heading: $pageTitle })

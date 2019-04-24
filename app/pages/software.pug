@@ -1,0 +1,11 @@
+extends ../base/_template_html.pug
+
+block page-id
+  - const $pageId = 'software';
+
+block page-main
+  .page-main__software
+    +product-catalog({
+      modifier: 'software',
+      heading: $pageTitle
+    })

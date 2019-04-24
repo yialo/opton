@@ -1,0 +1,50 @@
+mixin product-features(productFeatures_options)
+  section.product-features(class=`product-features--${productFeatures_options.modifier}`)
+    .product-features__inner.s-aligner
+      - let productFeaturesHeading_class = 'product-features__heading';
+      if (productFeatures_options.modifier === 'advantages')
+        - productFeaturesHeading_class = 's-visually-hidden';
+      h2(class=productFeaturesHeading_class)= productFeatures_options.headingText
+      ul.product-features__list
+        mixin product-features__item(productFeaturesItem_Caption)
+          li.product-features__item
+            h3.product-features__caption= productFeaturesItem_Caption
+            block
+        case productFeatures_options.modifier
+          when 'advantages'
+            +product-features__item('Прочность и точность')
+              p.product-features__paragraph.s-paragraph
+                | Прочная конструкция машины CONTURA G2 обеспечивает точные и воспроизводимые результаты измерений. Керамические направляющие по осям X и Z обеспечивают жесткость и защиту от внешних воздействий в процессе производства.
+                br
+                | Пневматические подшипники, установленные на всех трех осях, гарантируют максимальную стабильность даже при высоких скоростях перемещения и ускорениях. Линейки могут быть установлены непосредственно в цехе и защищены от загрязнения и других воздействий.
+            +product-features__item('Удобное управление')
+              p.product-features__paragraph.s-paragraph
+                | Управление системой осуществляется с помощью удобной в эксплуатации панели управления и не требует использования компьютера.
+                br
+                | Ручка непрерывного управления обеспечивает простоту и высокую точность управления всеми перемещениями по осям. Регулировка скорости возможна в режиме ЧПУ.
+            +product-features__item('Компьютерная точность (CAA)')
+              p.product-features__paragraph.s-paragraph
+                | Портал подвергается воздействию динамических сил, которые могут повлиять на точность, особенно в процессе сканирования. Машина CONTURA рассчитывает компенсацию для подобных инерционных воздействий.
+                br
+                | Это обеспечивает сохранение необходимой точности даже при высоких скоростях измерения.
+            +product-features__item('Большой выбор опций')
+              ul.product-features__inner-list
+                li.product-features__inner-item.s-paragraph
+                  | Технология navigator для увеличения скорости сканирования с помощью измерительной головки VAST XT.
+                li.product-features__inner-item.s-paragraph
+                  | Версия HTG (с высокотемпературным градиентом) обеспечивает работу в большем диапазоне температур (18-26°C) с сохранением высокого уровня точности. Опция HTG включает в себя температурные датчики для детали и измерительной машины.
+                li.product-features__inner-item.s-paragraph
+                  | Встроенная сенсорная стойка для максимальной воспроизводимости результатов без необходимости повторной калибровки.
+          when 'types'
+            +product-features__item('CONTURA G2 direkt')
+              p.product-features__paragraph.s-paragraph
+                | Сканирующая машина в базовой комплектации от компании Carl Zeiss оснащена сканирующим датчиком VAST XXT, гарантирующим точные результаты при работе с самыми разнообразными деталями. Данная линейка продукции идеально подходит для измерения небольших деталей со стандартными, перпендикулярными геометрическими характеристиками без угловых геометрических элементов или для технологического контроля отдельных этапов обработки.
+            +product-features__item('CONTURA G2 aktiv')
+              p.product-features__paragraph.s-paragraph
+                | Система CONTURA G2 aktiv с активным сканирующим датчиком VAST XT gold позволяет использовать комплексные щуповые системы для высокоэффективного измерения глубоких и изогнутых элементов.
+            +product-features__item('CONTURA G2 RDS')
+              p.product-features__paragraph.s-paragraph
+                | Гибкий держатель многоповоротной измерительной головки RDS в сочетании с датчиком VAST XXT обеспечивает сканирование элементов во всех угловых положениях. Лучший в своем классе держатель многоповоротной измерительной головки (20736 с шагом 2,5) позволяет получить доступ практически ко всем пространственным углам благодаря очень большому числу отдельных положений. Это создает особые преимущества для измерения деталей сложной формы, при работе с которыми, как правило, необходимо создавать щуповые системы для различных пространственных направлений. Кроме того, оптические датчики от компании Carl Zeiss также могут использоваться с RDS.
+            +product-features__item('CONTURA G2 navigator')
+              p.product-features__paragraph.s-paragraph
+                | Кроме того, машина CONTURA G2 может быть оснащена технологией navigator для увеличения скорости и точности сканирования.

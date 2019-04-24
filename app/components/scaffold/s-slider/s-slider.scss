@@ -1,0 +1,33 @@
+.#{$this} {
+  position: relative;
+}
+
+.#{$this}__controls {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+
+  @media (min-width: $large-min-width) {
+    top: 209px;
+    bottom: auto;
+    right: calc(50% - 660px);
+    width: 14px;
+  }
+}
+
+.#{$this}__controls-wrapper {
+  @include margin-hor();
+  display: flex;
+  justify-content: center;
+  width: $small-min-width;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $large-min-width) {
+    @include margin-hor(0);
+    display: block;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

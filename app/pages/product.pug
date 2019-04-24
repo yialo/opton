@@ -1,0 +1,14 @@
+extends ../base/_template_html.pug
+
+block page-id
+  - const $pageId = 'product';
+
+block page-main
+  .page-main__product-review
+    +product-review($pageHeading)
+  .page-main__product-features
+    +product-features({ modifier: 'advantages', headingText: 'Преимущества' })
+    +product-features({
+      modifier: 'types',
+      headingText: 'Четыре подхода к активному сканированию direkt, RDS, aktiv или navigator',
+    })

@@ -1,0 +1,15 @@
+mixin intro()
+  section.intro
+    .intro__inner.s-aligner
+      picture.intro__image-wrapper
+        source(media=viewportLargeMinWidth srcset='img/intro--large.jpg')
+        source(media=viewportMediumMinWidth srcset='img/intro--medium.jpg')
+        img.intro__image(src='img/intro--small.jpg' alt='Микроскоп')
+      h2(class=[
+        'intro__heading',
+        's-heading',
+        's-heading--underlined'
+      ])
+        span.s-heading__string Что мы делаем?
+      p.intro__description
+        | Для эффективного решения ваших производственных задач мы предлагаем поставку, внедрение, сервисное обслуживание современного высокотехнологичного измерительного, аналитического и обрабатывающего оборудования, инструмента, а также программного обеспечения от лучших мировых производителей.

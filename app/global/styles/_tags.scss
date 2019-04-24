@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  @include font();
+  min-width: $small-min-width;
+  margin: 0;
+  color: black;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+TODO: check if commented rules below are necessary for project
+
+img,
+svg,
+picture,
+video {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+*/
+
+button {
+  // display: block;
+  cursor: pointer;
+}

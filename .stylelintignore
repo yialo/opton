@@ -1,1 +1,5 @@
-./**/sass/vendors/
+*.js
+app/vendor/
+app/vendor_customized/
+dist/
+node_modules/

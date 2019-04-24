@@ -1,0 +1,24 @@
+mixin breadcrumbs(breadcrumps_pageId)
+  .breadcrumbs
+    .breadcrumbs__inner.s-aligner
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href='index.html') Главная
+        case breadcrumps_pageId
+          when 'production'
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='brands.html') Партнеры
+            li.breadcrumbs__item
+              a.breadcrumbs__link ZEISS
+          when 'product'
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='production.html') Партнеры
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='#') METROLOGIC
+            li.breadcrumbs__item
+              a.breadcrumbs__link ZEISS CONTURA G2
+          when 'software'
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='brands.html') Партнеры
+            li.breadcrumbs__item
+              a.breadcrumbs__link METROLOGIC

@@ -1,0 +1,41 @@
+.slick-dots {
+  @include list;
+  display: flex;
+
+  @media (min-width: $large-min-width) {
+    display: block;
+  }
+}
+
+.slick-dots li {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  @media (min-width: $large-min-width) {
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.slick-dots button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+
+  @media (min-width: $large-min-width) {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.slick-active button {
+  background-color: white;
+}

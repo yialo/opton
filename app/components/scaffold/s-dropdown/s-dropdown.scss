@@ -1,0 +1,25 @@
+.#{$this}__body {
+  @media (max-width: $small-max-width) {
+    display: none;
+
+    .is-menu-visible & {
+      display: block;
+    }
+  }
+}
+
+.#{$this}__closed {
+  display: inline;
+
+  .is-menu-visible & {
+    display: none;
+  }
+}
+
+.#{$this}__opened {
+  display: none;
+
+  .is-menu-visible & {
+    display: inline;
+  }
+}

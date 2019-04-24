@@ -1,0 +1,18 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title= 'Opton: страницы'
+    meta(name='description' content='Официальный поставщик измерительного оборудования от ведущих мировых производителей')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='cmsmagazine' content='cdc79537f1d9f113c73cd2fd46ca0125')
+    meta(name='author' content='Веб-студия WayToStart')
+  body
+    h1 Это стартовая страница для тестирования вёрстки
+    p Пожалуйста, выберите интересующую страницу сайта:
+    ul.tech__list
+      include ../global/data/_dt_pages.pug
+      each path, list in $PAGES
+        - const [title, headine] = list;
+        li.tech__item
+          a.tech__link(href=`${path}.html`, target='_blank')= title

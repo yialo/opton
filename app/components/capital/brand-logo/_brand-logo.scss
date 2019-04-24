@@ -1,0 +1,10 @@
+.#{$this} {
+  padding: 20px 10px;
+  border-radius: 8px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.05);
+
+  @media (min-width: $medium-min-width) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
