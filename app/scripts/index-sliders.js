@@ -3,7 +3,7 @@ $('.promo__list').slick({
   autoplaySpeed: 5000,
   arrows: false,
   dots: true,
-  appendDots: $('.slider__controls-wrapper')
+  appendDots: $('.s-slider__controls-wrapper')
 });
 
 
