@@ -12,7 +12,7 @@ html(lang='ru')
     p Пожалуйста, выберите интересующую страницу сайта:
     ul.tech__list
       include ../global/data/_dt_pages.pug
-      each path, list in $PAGES
+      each list, path in $PAGES
         - const [title, headine] = list;
         li.tech__item
           a.tech__link(href=`${path}.html`, target='_blank')= title
